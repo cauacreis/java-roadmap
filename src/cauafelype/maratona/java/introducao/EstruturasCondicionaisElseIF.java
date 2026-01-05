@@ -2,7 +2,7 @@ package cauafelype.maratona.java.introducao;
 
 public class EstruturasCondicionaisElseIF {
     public static void main(String[] args) {
-        
+
         int idade = 10;
 
         if (idade >= 18 && idade <= 30) {
@@ -20,3 +20,4 @@ public class EstruturasCondicionaisElseIF {
         }
     }
 }
+//
