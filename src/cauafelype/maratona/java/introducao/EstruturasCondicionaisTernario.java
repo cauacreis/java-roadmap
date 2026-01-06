@@ -18,7 +18,7 @@ public class EstruturasCondicionaisTernario {
 
         // Agora da nova maneira, operador ternário
         // (condicao) ? verdadeiro : falso
-        // Se eu receber um salário de 4500, vou investir 500 na bolsa de valores
+        // Se eu receber um salário de 5000, vou investir 500 na bolsa de valores
 
         String mensagemInvestir = "Eu vou investir 500 na bolsa de valores";
         String mensagemNaoInvestir = "Eu não vou investir 500 na bolsa de valores";
