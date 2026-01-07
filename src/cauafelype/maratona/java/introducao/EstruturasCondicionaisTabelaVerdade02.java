@@ -33,5 +33,6 @@ public class EstruturasCondicionaisTabelaVerdade02 {
                     System.out.println("ACESSO NEGADO: Credenciais inválidas! Chamando a polícia!");
                 }
             }
+            leitor.close();
     }
 }
