@@ -31,6 +31,16 @@ public class EstruturasDeRepeticao {
         for (int i = 1; i<=10;i++) {
             System.out.println("número atual do contador i: "+i);
         }
+
+// JEITO COM CONTINUE (Filtra o que NÃO quer)
+        for (int a = 1; a <= 50; a++) {
+            // Se for ímpar, PULA FORA!
+            if (a % 2 != 0) {
+                continue;
+            }
+
+            System.out.println("Par: " + a);
+        }
         leitor.close();
     }
 }
