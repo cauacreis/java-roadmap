@@ -27,6 +27,6 @@ public class LoopsAninhadosEx3 {
 
             System.out.println();
         }
-
+    input.close();
     }
 }
