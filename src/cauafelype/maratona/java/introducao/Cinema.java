@@ -21,6 +21,9 @@ public class Cinema {
                     System.out.printf(cadeirasDoCinema[i][j] + " ");
                 }
             }
+        } else {
+            System.out.println("O menu foi encerrado! ");
+            return;
         }
 
         do {
@@ -33,23 +36,47 @@ public class Cinema {
                 System.out.println("Selecione sua cadeira em um acervo 5 por 5: ");
                 System.out.println("Digite o número da coluna: (0 a 4)");
                 int coluna = input.nextInt();
+                        if (coluna > 4 || coluna < 0) {
+                            System.out.println("Você não pode selecionar uma coluna inexistente, favor colunas de (0 a 4)");
+                            continue;
+                        }
                 System.out.println("----------------------------------");
                 System.out.println("Digite o número da linha: (0 a 4)");
                 int linha = input.nextInt();
+                        if (linha > 4 || linha < 0) {
+                        System.out.println("Você não pode selecionar uma linha inexistente, favor linhas de (0 a 4)");
+                        continue;
+                        }
                 System.out.println("----------------------------------");
-                System.out.println("Sua cadeira foi reservada com sucesso");
-                cadeirasDoCinema[linha][coluna] = 1;
+                        if (cadeirasDoCinema[linha][coluna] == 0){
+                     System.out.println("Sua cadeira foi reservada com sucesso");
+                    cadeirasDoCinema[linha][coluna] = 1;
+                        } else if (cadeirasDoCinema[linha][coluna] == 1) {
+                            System.out.println("Você não pode reservar uma cadeira já reservada. ");
+                        }
             } else if (respostaMenu == 2) {
                 System.out.println("Cadastro de cadeiras do cinema: ");
                 System.out.println("Selecione sua cadeira para cancelar a reserva em um acervo 5 por 5: ");
                 System.out.println("Digite o número da coluna: (0 a 4)");
                 int coluna = input.nextInt();
+                if (coluna > 4 || coluna < 0) {
+                    System.out.println("Você não pode selecionar uma linha inexistente, favor linhas de (0 a 4)");
+                    continue;
+                }
                 System.out.println("----------------------------------");
                 System.out.println("Digite o número da linha: (0 a 4)");
                 int linha = input.nextInt();
+                if (linha > 4 || linha < 0) {
+                    System.out.println("Você não pode selecionar uma linha inexistente, favor linhas de (0 a 4)");
+                    continue;
+                }
                 System.out.println("----------------------------------");
-                System.out.println("Sua cadeira foi cancelada com sucesso!");
-                cadeirasDoCinema[linha][coluna] = 0;
+                    if (cadeirasDoCinema[linha][coluna] == 0){
+                        System.out.println("Você não pode cancelar uma cadeira que não foi reservada");
+                    } else if (cadeirasDoCinema[linha][coluna] == 1) {
+                        System.out.println("Sua cadeira foi cancelada com sucesso!");
+                        cadeirasDoCinema[linha][coluna] = 0;
+                    }
             }
             System.out.println("Estes são os assentos disponíveis: (0 para vazias e 1 para ocupadas)");
             System.out.println("----------------------------------");
@@ -60,6 +87,7 @@ public class Cinema {
                     System.out.printf(cadeirasDoCinema[i][j] + " ");
                 }
             }
+
 
         } while (respostaMenu != 3);
         System.out.println("\nPrograma finalizado com sucesso!");
