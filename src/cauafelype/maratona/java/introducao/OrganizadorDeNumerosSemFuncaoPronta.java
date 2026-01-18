@@ -1,6 +1,5 @@
 package cauafelype.maratona.java.introducao;
 
-import java.util.Collections;
 import java.util.Scanner;
 
 public class OrganizadorDeNumerosSemFuncaoPronta {
@@ -27,10 +26,11 @@ public class OrganizadorDeNumerosSemFuncaoPronta {
                     num[i+1] = temp;
                 }
             }
-            }
+                }
         System.out.println("Temos esses números guardados no array organizado: ");
         for (int j = 0; j < num.length; j++){
             System.out.print(num[j]+" ");
         }
+        sc.close();
     }
 }
