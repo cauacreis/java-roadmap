@@ -1,42 +1,56 @@
 package cauafelype.maratona.java.introducao;
-        import java.util.Scanner;
+
+import java.util.Scanner;
+
 public class CaixaEletronico {
     public static void main(String[] args) {
-        int notasDe50, notasDe100, notasDe10, notasDe20, notasDe2, notasDe5;
         Scanner input = new Scanner(System.in);
-        System.out.println("Quanto você deseja sacar? ");
+
+        System.out.println("--------------------------------");
+        System.out.println("      CAIXA ELETRÔNICO JAVA     ");
+        System.out.println("--------------------------------");
+        System.out.print("Quanto você deseja sacar? R$ ");
         int saque = input.nextInt();
 
-        notasDe100 = saque / 100;
-        System.out.println("Você receberá "+notasDe100+" notas de 100");
-        notasDe100 = saque % 100;
-        System.out.println("Essa é a quantidade restante: "+notasDe100);
+        // 1. Notas de 100
+        int notasDe100 = saque / 100;
+        saque = saque % 100; // Atualiza o saque com o que sobrou pro beta (Resto)
 
-        notasDe50 = notasDe100 / 50;
-        System.out.println("Você receberá "+notasDe50+" notas de 50");
-        notasDe50 = notasDe100 % 50;
-        System.out.println("Essa é a quantidade restante: "+notasDe50);
+        // 2. Notas de 50
+        int notasDe50 = saque / 50;
+        saque %= 50; // "saque %= 50" é o mesmo que "saque = saque % 50"
 
-        notasDe20 = notasDe50 / 20;
-        System.out.println("Você receberá "+notasDe20+" notas de 20");
-        notasDe20 = notasDe50 % 20;
-        System.out.println("Essa é a quantidade restante: "+notasDe20);
+        // 3. Notas de 20
+        int notasDe20 = saque / 20;
+        saque %= 20;
 
-        notasDe10 = notasDe20 / 10;
-        System.out.println("Você receberá "+notasDe10+" notas de 10");
-        notasDe10 = notasDe20 % 10;
-        System.out.println("Essa é a quantidade restante: "+notasDe10);
+        // 4. Notas de 10
+        int notasDe10 = saque / 10;
+        saque %= 10;
 
-        notasDe5 = notasDe10 / 5;
-        System.out.println("Você receberá "+notasDe5+" notas de 5");
-        notasDe5 = notasDe10 % 5;
-        System.out.println("Essa é a quantidade restante: "+notasDe5);
+        // 5. Notas de 5
+        int notasDe5 = saque / 5;
+        saque %= 5;
 
-        notasDe2 = notasDe5 / 2;
-        System.out.println("Você receberá "+notasDe2+" notas de 2");
-        notasDe2 = notasDe5 % 2;
-        System.out.println("Essa é a quantidade restante que você receberá em moedas de 1 real: "+notasDe2);
-        
+        // 6. Notas de 2
+        int notasDe2 = saque / 2;
+        saque %= 2; // O que sobrar aqui (1 ou 0) vira moeda de 1 real
+
+        System.out.println("\n--------------------------------");
+        System.out.println("        SAQUE REALIZADO         ");
+        System.out.println("--------------------------------");
+
+        if (notasDe100 > 0) System.out.println(notasDe100 + " notas de R$ 100,00");
+        if (notasDe50 > 0)  System.out.println(notasDe50  + " notas de R$ 50,00");
+        if (notasDe20 > 0)  System.out.println(notasDe20  + " notas de R$ 20,00");
+        if (notasDe10 > 0)  System.out.println(notasDe10  + " notas de R$ 10,00");
+        if (notasDe5 > 0)   System.out.println(notasDe5   + " notas de R$ 5,00");
+        if (notasDe2 > 0)   System.out.println(notasDe2   + " notas de R$ 2,00");
+
+        if (saque > 0)      System.out.println(saque      + " moedas de R$ 1,00");
+
+        System.out.println("--------------------------------");
+
         input.close();
     }
 }
