@@ -22,5 +22,6 @@ public class NumeroPrimo {
             }
         }
         System.out.println("Vamos descobrir agora se esse número é primo: " + isPrimo);
+        input.close();
     }
 }
