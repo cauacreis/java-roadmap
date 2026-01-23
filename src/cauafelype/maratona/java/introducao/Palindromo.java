@@ -2,7 +2,7 @@ package cauafelype.maratona.java.introducao;
 
 import java.util.Scanner;
 
-//Palindromo do jeito menos eficiente   
+//Palindromo do jeito menos eficiente
 
 public class Palindromo {
     public static void main(String[] args) {
@@ -28,6 +28,6 @@ public class Palindromo {
         }
 
         System.out.println("Parabéns você digitou um palíndromo");
-
+        input.close();
     }
 }
