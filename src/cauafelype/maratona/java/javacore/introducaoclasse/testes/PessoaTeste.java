@@ -11,5 +11,6 @@ public class PessoaTeste {
         System.out.println(pessoa.nome);
         System.out.println(pessoa.sexo);
         System.out.println(pessoa.idade);
+        System.out.println(pessoa);
     }
 }
