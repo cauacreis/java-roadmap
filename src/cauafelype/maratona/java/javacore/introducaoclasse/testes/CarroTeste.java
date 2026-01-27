@@ -7,11 +7,9 @@ public class CarroTeste {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
 
-        // Criando os objetos (As duas TVs 📺)
         CarroClasse carro1 = new CarroClasse();
         CarroClasse carro2 = new CarroClasse();
 
-        // --- CADASTRO DO PRIMEIRO CARRO ---
         System.out.println("=== CADASTRO DO CARRO 01 ===");
         System.out.print("Marca: ");
         carro1.marca = input.next();
@@ -32,7 +30,6 @@ public class CarroTeste {
         carro1.placa = input.next();
 
 
-        // --- CADASTRO DO SEGUNDO CARRO ---
         System.out.println("\n=== CADASTRO DO CARRO 02 ===");
         System.out.print("Marca: ");
         carro2.marca = input.next();
@@ -52,7 +49,6 @@ public class CarroTeste {
         System.out.print("Placa: ");
         carro2.placa = input.next();
 
-        // --- RELATÓRIO FINAL ---
         System.out.println("\n---------------- RELATÓRIO DE FROTA ----------------");
 
         System.out.println("CARRO 1:");
