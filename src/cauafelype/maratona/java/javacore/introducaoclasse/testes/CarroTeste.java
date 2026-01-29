@@ -9,6 +9,7 @@ public class CarroTeste {
 
         CarroClasse carro1 = new CarroClasse();
         CarroClasse carro2 = new CarroClasse();
+        CarroClasse carro3 = new CarroClasse();
 
         System.out.println("=== CADASTRO DO CARRO 01 ===");
         System.out.print("Marca: ");
@@ -59,6 +60,11 @@ public class CarroTeste {
         System.out.println("Marca: " + carro2.marca + " | Modelo: " + carro2.modelo + " | Placa: " + carro2.placa);
         System.out.println("Ano: " + carro2.ano + " | Cor: " + carro2.cor + " | Valor: R$ " + carro2.valor);
         System.out.println("----------------------------------------------------");
+
+
+        // referencia de objeto
+        carro3 = carro2;
+        System.out.println(carro3.ano+" "+carro3.valor+" "+carro3.marca+" "+carro3.cor);
 
         input.close();
     }
