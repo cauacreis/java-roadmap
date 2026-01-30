@@ -8,7 +8,7 @@ public class calculadora {
         System.out.println(15-10);
     }
 
-    public void multiplicaDoisNumeros(int num1, int num2){
-        System.out.println(num1*num2);
+    public int multiplicaDoisNumeros(int num1, int num2){
+        return num1*num2;
     }
 }

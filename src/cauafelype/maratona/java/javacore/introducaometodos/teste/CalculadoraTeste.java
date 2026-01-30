@@ -15,10 +15,11 @@ public class CalculadoraTeste {
         System.out.println("Finalizando Subtracao");
         System.out.println("Me diga o primeiro número para multiplicar: ");
         int num1 = input.nextInt();
-        System.out.println("Me diga o primeiro número para multiplicar: ");
+        System.out.println("Me diga o segundo número para multiplicar: ");
         int num2 = input.nextInt();
 
-        somaDosNumeros.multiplicaDoisNumeros(num1, num2);
+        System.out.println("Essa é a multplicação desses números: "+somaDosNumeros.multiplicaDoisNumeros(num1, num2));
         System.out.println("Finalizando Multiplicacao");
+        input.close();
     }
 }
