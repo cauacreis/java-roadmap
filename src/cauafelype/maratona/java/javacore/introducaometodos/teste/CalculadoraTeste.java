@@ -20,6 +20,9 @@ public class CalculadoraTeste {
 
         System.out.println("Essa é a multplicação desses números: "+somaDosNumeros.multiplicaDoisNumeros(num1, num2));
         System.out.println("Finalizando Multiplicacao");
+
+        System.out.println("Essa é a divisão dos números que você escolheu: "+somaDosNumeros.divideDoisNumeros(num1, num2));
+
         input.close();
     }
 }
