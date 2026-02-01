@@ -8,15 +8,25 @@ public class CalculadoraTeste {
 
         Scanner input = new Scanner(System.in);
 
+        double num1;
+        double num2;
+
         calculadora somaDosNumeros = new calculadora();
         somaDosNumeros.somaDoisNumeros();
         System.out.println("Finalizando CalculadoraTeste");
         somaDosNumeros.subtraiDoisNumeros();
         System.out.println("Finalizando Subtracao");
-        System.out.println("Me diga o primeiro número para multiplicar: ");
-        int num1 = input.nextInt();
-        System.out.println("Me diga o segundo número para multiplicar: ");
-        int num2 = input.nextInt();
+        do {
+            System.out.println("Me diga o primeiro número para multiplicar: (maior que 0)");
+            num1 = input.nextDouble();
+            System.out.println("Me diga o segundo número para multiplicar: (maior que 0)");
+            num2 = input.nextDouble();
+
+            if (num1 == 0 || num2 == 0) {
+                System.out.println("Você não pode dividir por 0!");
+            }
+
+        } while (num1 <= 0 || num2 <= 0);
 
         System.out.println("Essa é a multplicação desses números: "+somaDosNumeros.multiplicaDoisNumeros(num1, num2));
         System.out.println("Finalizando Multiplicacao");
