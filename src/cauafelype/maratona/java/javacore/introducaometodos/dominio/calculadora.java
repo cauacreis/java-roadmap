@@ -34,6 +34,10 @@ public class calculadora {
         }
         System.out.println(soma);
     }
+
+
+    //int... numeros, se tiver mais de um argumento, o varArgs tem que ser o último a ser colocado, pq se ele for o primeiro
+    // ele proibe outros na frente dele
     public void somaVarArgs(int... numeros){
         int soma = 0;
         for(int num : numeros){
