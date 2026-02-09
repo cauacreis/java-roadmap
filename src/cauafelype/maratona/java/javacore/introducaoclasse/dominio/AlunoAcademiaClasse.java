@@ -7,7 +7,7 @@ public class AlunoAcademiaClasse {
     public double alturaEmMetros;
     public int frequenciaAtividade;
     public String sexo;
-    public String objetivo;
+    public int objetivo;
     public double imc;
     public double taxaMetabolicaTMB;
 }

@@ -25,11 +25,13 @@ public class HealthMonitorTeste {
         System.out.println("Digite sua frequência de atividades: (1 a 4)");
             aluno.frequenciaAtividade = input.nextInt();
         System.out.println("Agora me fale seu objetivo: (1 para emagrecer, 2 para ganhar massa, 3 para manter)");
+            aluno.objetivo = input.nextInt();
 
         AcademiaHealthMonitor.calculadoraIMC(aluno);
         AcademiaHealthMonitor.classificacaoDeIMC(aluno);
         AcademiaHealthMonitor.taxaMetabolicaBasal(aluno);
         AcademiaHealthMonitor.fatorDeAtividade(aluno);
         AcademiaHealthMonitor.consumirAgua(aluno);
+        AcademiaHealthMonitor.objetivo(aluno);
     }
 }
