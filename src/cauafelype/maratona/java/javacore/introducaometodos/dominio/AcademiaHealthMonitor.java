@@ -63,7 +63,7 @@ public class AcademiaHealthMonitor {
                 System.out.printf("O máximo de bulking a ser alcançado é: %.2f KCAL%n", caloriasObjetivo);
             }
             case 3 ->
-                System.out.println("Apenas consuma a quantidade necessária de calorias que você necessita: "+aluno.gastoTotal);
+                System.out.printf("Apenas consuma a quantidade necessária de calorias que você necessita: %.2f KCAL%n ", aluno.gastoTotal);
         }
     }
     public static void treinoAluno (AlunoAcademiaClasse aluno) {
@@ -90,13 +90,11 @@ public class AcademiaHealthMonitor {
                 System.out.println("TREINO A (Peito, Ombros e Tríceps):");
                 System.out.println("- Supino Reto (4x 8-10)");
                 System.out.println("- Desenvolvimento Militar (4x 8-10)");
-                System.out.println("- Tríceps Testa (3x 10-12)");
-                System.out.println("");
+                System.out.println("- Tríceps Testa (3x 10-12)\n");
                 System.out.println("TREINO B (Costas e Bíceps):");
                 System.out.println("- Puxada Alta ou Barra Fixa (4x 8-10)");
                 System.out.println("- Remada Baixa (4x 10)");
-                System.out.println("- Rosca Direta (3x 10-12)");
-                System.out.println("");
+                System.out.println("- Rosca Direta (3x 10-12)\n");
                 System.out.println("TREINO C (Pernas Completo):");
                 System.out.println("- Agachamento Livre (4x 8)");
                 System.out.println("- Leg Press 45 (4x 10)");

@@ -13,9 +13,9 @@ public class HealthMonitorTeste {
 
         System.out.println("Digite o seu nome: ");
         aluno.nome = input.nextLine();
-        System.out.println("Digite o seu peso: ");
+        System.out.println("Digite o seu peso: (Kg)");
         aluno.peso = input.nextDouble();
-        System.out.println("Digite a sua altura: ");
+        System.out.println("Digite a sua altura: (Metros)");
         aluno.alturaEmMetros = input.nextDouble();
         input.nextLine();
         while (true) {
