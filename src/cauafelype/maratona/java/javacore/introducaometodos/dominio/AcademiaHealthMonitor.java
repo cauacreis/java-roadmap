@@ -71,5 +71,58 @@ public class AcademiaHealthMonitor {
             }
         }
     }
+    public static void treinoAluno (AlunoAcademiaClasse aluno) {
+        switch (aluno.objetivo) {
+            case 1 -> {
+                System.out.println("OBJETIVO: EMAGRECIMENTO (PERDA DE GORDURA)");
+                System.out.println("Estilo: Circuito Metabólico (Descanso curto: 30s)");
+                System.out.println("----------------------------------------");
+                System.out.println("AQUECIMENTO: 10 min de Caminhada/Trote");
+                System.out.println("----------------------------------------");
+                System.out.println("1. Agachamento Livre (3x 15 reps)");
+                System.out.println("2. Flexão de Braços (3x 10-12 reps)");
+                System.out.println("3. Polichinelos (3x 1 min)");
+                System.out.println("4. Remada Curvada (3x 15 reps)");
+                System.out.println("5. Mountain Climbers (3x 40 seg)");
+                System.out.println("6. Prancha Abdominal (3x até a falha)");
+                System.out.println("----------------------------------------");
+                System.out.println("CARDIO FINAL: 20 min moderado (Bike ou Esteira)");
+            }
+            case 2 -> {
+                System.out.println("OBJETIVO: HIPERTROFIA (GANHO DE MASSA)");
+                System.out.println("Estilo: Divisão ABC (Descanso: 90s a 120s)");
+                System.out.println("----------------------------------------");
+                System.out.println("TREINO A (Peito, Ombros e Tríceps):");
+                System.out.println("- Supino Reto (4x 8-10)");
+                System.out.println("- Desenvolvimento Militar (4x 8-10)");
+                System.out.println("- Tríceps Testa (3x 10-12)");
+                System.out.println("");
+                System.out.println("TREINO B (Costas e Bíceps):");
+                System.out.println("- Puxada Alta ou Barra Fixa (4x 8-10)");
+                System.out.println("- Remada Baixa (4x 10)");
+                System.out.println("- Rosca Direta (3x 10-12)");
+                System.out.println("");
+                System.out.println("TREINO C (Pernas Completo):");
+                System.out.println("- Agachamento Livre (4x 8)");
+                System.out.println("- Leg Press 45 (4x 10)");
+                System.out.println("- Cadeira Extensora (3x 12)");
+            }
+            case 3 -> {
+                System.out.println("OBJETIVO: MANUTENÇÃO E SAÚDE (FUNCIONAL)");
+                System.out.println("Estilo: Full Body (Corpo Todo)");
+                System.out.println("----------------------------------------");
+                System.out.println("1. Pular Corda (3x 2 min)");
+                System.out.println("2. Kettlebell Swing (3x 15)");
+                System.out.println("3. Afundo/Passada (3x 12 cada perna)");
+                System.out.println("4. Barra Fixa ou Puxada (3x 10)");
+                System.out.println("5. Desenvolvimento com Halteres (3x 12)");
+                System.out.println("6. Abdominal Remador (3x 20)");
+                System.out.println("----------------------------------------");
+                System.out.println("DICA: Foque na execução perfeita e alongamento.");
+            }
+            default -> System.out.println("Objetivo não identificado. Consulte um instrutor.");
+
+        }
+    }
 }
 

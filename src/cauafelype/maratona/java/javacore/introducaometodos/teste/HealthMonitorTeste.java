@@ -33,5 +33,6 @@ public class HealthMonitorTeste {
         AcademiaHealthMonitor.fatorDeAtividade(aluno);
         AcademiaHealthMonitor.consumirAgua(aluno);
         AcademiaHealthMonitor.objetivo(aluno);
+        AcademiaHealthMonitor.treinoAluno(aluno);
     }
 }
