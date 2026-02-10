@@ -10,4 +10,5 @@ public class AlunoAcademiaClasse {
     public int objetivo;
     public double imc;
     public double taxaMetabolicaTMB;
+    public double gastoTotal;
 }

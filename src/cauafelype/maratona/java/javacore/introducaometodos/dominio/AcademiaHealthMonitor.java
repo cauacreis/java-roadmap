@@ -3,7 +3,6 @@ package cauafelype.maratona.java.javacore.introducaometodos.dominio;
 import cauafelype.maratona.java.javacore.introducaoclasse.dominio.AlunoAcademiaClasse;
 
 public class AcademiaHealthMonitor {
-    static double gastoTotal;
     public static void calculadoraIMC(AlunoAcademiaClasse aluno) {
          aluno.imc = aluno.peso / (aluno.alturaEmMetros * aluno.alturaEmMetros);
         System.out.printf("O IMC do aluno %s é: %.2f%n", aluno.nome, aluno.imc);
@@ -38,35 +37,33 @@ public class AcademiaHealthMonitor {
     }
     public static void fatorDeAtividade (AlunoAcademiaClasse aluno) {
         double fatorAtividade = switch (aluno.frequenciaAtividade) {
-            case 1 -> 1.2;
             case 2 -> 1.375;
             case 3 -> 1.55;
             case 4 -> 1.725;
             default -> 1.2;
         };
-        gastoTotal = aluno.taxaMetabolicaTMB * fatorAtividade;
-        System.out.printf("Você gasta em média essa quantidade de calorias por dia, baseado no seu nível de atividade: %.2f KCAL%n", gastoTotal);
+        aluno.gastoTotal = aluno.taxaMetabolicaTMB * fatorAtividade;
+        System.out.printf("Você gasta em média essa quantidade de calorias por dia, baseado no seu nível de atividade: %.2f KCAL%n", aluno.gastoTotal);
     }
     public static void consumirAgua (AlunoAcademiaClasse aluno) {
         double agua = aluno.peso * 50;
         System.out.println("Você deve consumir essa quantidade de água por dia: "+agua+"ML");
     }
     public static void objetivo (AlunoAcademiaClasse aluno) {
-        double caloriasObjetivo = gastoTotal;
+        double caloriasObjetivo;
         switch (aluno.objetivo) {
             case 1 -> {
                 System.out.println("Você deve começar um déficit calórico de 50 calorias por semana, diminua até chegar 500 calorias a menos: ");
-                caloriasObjetivo = gastoTotal - 500;
+                caloriasObjetivo = aluno.gastoTotal - 500;
                 System.out.printf("O máximo de déficit a ser alcançado é: %.2f KCAL%n", caloriasObjetivo);
             }
             case 2 -> {
                 System.out.println("Você deve começar um processo de bulking, aumente 50 calorias por semana, até chegar 500 calorias a mais");
-                caloriasObjetivo = gastoTotal + 500;
+                caloriasObjetivo = aluno.gastoTotal + 500;
                 System.out.printf("O máximo de bulking a ser alcançado é: %.2f KCAL%n", caloriasObjetivo);
             }
-            case 3 -> {
-                System.out.println("Apenas consuma a quantidade necessária de calorias que você necessita: "+gastoTotal);
-            }
+            case 3 ->
+                System.out.println("Apenas consuma a quantidade necessária de calorias que você necessita: "+aluno.gastoTotal);
         }
     }
     public static void treinoAluno (AlunoAcademiaClasse aluno) {
