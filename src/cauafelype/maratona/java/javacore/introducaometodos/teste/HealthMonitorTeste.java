@@ -15,7 +15,7 @@ public class HealthMonitorTeste {
             aluno.nome = input.nextLine();
         System.out.println("Digite o seu peso: ");
             aluno.peso = input.nextDouble();
-        System.out.println("Digite o seu altura: ");
+        System.out.println("Digite a sua altura: ");
             aluno.alturaEmMetros = input.nextDouble();
             input.nextLine();
         System.out.println("Digite seu sexo: (M ou F)");
@@ -28,11 +28,18 @@ public class HealthMonitorTeste {
             aluno.objetivo = input.nextInt();
 
         AcademiaHealthMonitor.calculadoraIMC(aluno);
+        AcademiaHealthMonitor.divisaoDeTexto();
         AcademiaHealthMonitor.classificacaoDeIMC(aluno);
+        AcademiaHealthMonitor.divisaoDeTexto();
         AcademiaHealthMonitor.taxaMetabolicaBasal(aluno);
+        AcademiaHealthMonitor.divisaoDeTexto();
         AcademiaHealthMonitor.fatorDeAtividade(aluno);
+        AcademiaHealthMonitor.divisaoDeTexto();
         AcademiaHealthMonitor.consumirAgua(aluno);
+        AcademiaHealthMonitor.divisaoDeTexto();
         AcademiaHealthMonitor.objetivo(aluno);
+        AcademiaHealthMonitor.divisaoDeTexto();
         AcademiaHealthMonitor.treinoAluno(aluno);
+        AcademiaHealthMonitor.divisaoDeTexto();
     }
 }

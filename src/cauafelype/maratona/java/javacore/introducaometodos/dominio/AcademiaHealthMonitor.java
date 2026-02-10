@@ -2,8 +2,6 @@ package cauafelype.maratona.java.javacore.introducaometodos.dominio;
 
 import cauafelype.maratona.java.javacore.introducaoclasse.dominio.AlunoAcademiaClasse;
 
-import java.util.Objects;
-
 public class AcademiaHealthMonitor {
     static double gastoTotal;
     public static void calculadoraIMC(AlunoAcademiaClasse aluno) {
@@ -123,6 +121,9 @@ public class AcademiaHealthMonitor {
             default -> System.out.println("Objetivo não identificado. Consulte um instrutor.");
 
         }
+    }
+    public static void divisaoDeTexto () {
+        System.out.println("--------------------------");
     }
 }
 
