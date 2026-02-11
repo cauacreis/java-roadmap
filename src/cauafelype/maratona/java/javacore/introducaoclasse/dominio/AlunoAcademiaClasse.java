@@ -11,4 +11,5 @@ public class AlunoAcademiaClasse {
     public double imc;
     public double taxaMetabolicaTMB;
     public double gastoTotal;
+    public double caloriasObjetivo;
 }

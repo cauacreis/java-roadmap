@@ -68,5 +68,6 @@ public class HealthMonitorTeste {
         AcademiaHealthMonitor.divisaoDeTexto();
         AcademiaHealthMonitor.treinoAluno(aluno);
         AcademiaHealthMonitor.divisaoDeTexto();
+        AcademiaHealthMonitor.calcularMacros(aluno);
     }
 }

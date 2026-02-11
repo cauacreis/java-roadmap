@@ -55,20 +55,21 @@ public class AcademiaHealthMonitor {
     }
 
     public static void objetivo(AlunoAcademiaClasse aluno) {
-        double caloriasObjetivo;
         switch (aluno.objetivo) {
             case 1 -> {
                 System.out.println("Você deve começar um déficit calórico de 50 calorias por semana, diminua até chegar 500 calorias a menos: ");
-                caloriasObjetivo = aluno.gastoTotal - 500;
-                System.out.printf("O máximo de déficit a ser alcançado é: %.2f KCAL%n", caloriasObjetivo);
+                aluno.caloriasObjetivo = aluno.gastoTotal - 500;
+                System.out.printf("O máximo de déficit a ser alcançado é: %.2f KCAL%n", aluno.caloriasObjetivo);
             }
             case 2 -> {
                 System.out.println("Você deve começar um processo de bulking, aumente 50 calorias por semana, até chegar 500 calorias a mais");
-                caloriasObjetivo = aluno.gastoTotal + 500;
-                System.out.printf("O máximo de bulking a ser alcançado é: %.2f KCAL%n", caloriasObjetivo);
+                aluno.caloriasObjetivo = aluno.gastoTotal + 500;
+                System.out.printf("O máximo de bulking a ser alcançado é: %.2f KCAL%n", aluno.caloriasObjetivo);
             }
-            case 3 ->
-                    System.out.printf("Apenas consuma a quantidade necessária de calorias que você necessita: %.2f KCAL%n ", aluno.gastoTotal);
+            case 3 -> {
+                    aluno.caloriasObjetivo = aluno.gastoTotal;
+                    System.out.printf("Apenas consuma a quantidade necessária de calorias que você necessita: %.2f KCAL%n ", aluno.caloriasObjetivo);
+            }
         }
     }
 
@@ -126,6 +127,17 @@ public class AcademiaHealthMonitor {
 
     public static void divisaoDeTexto() {
         System.out.println("--------------------------");
+    }
+    public static void calcularMacros(AlunoAcademiaClasse aluno) {
+        System.out.println("Vamos calcular o seu MACRO nutricional: ");
+        double gramasDeProteina = aluno.peso * 2;
+        double caloriasProteina = gramasDeProteina * 4;
+        double gramasDeGordura = aluno.peso * 1;
+        double caloriasGordura = gramasDeGordura * 9;
+        double caloriasOcupadas = caloriasProteina + caloriasGordura;
+        double caloriasDisponiveisParaCarbo = aluno.caloriasObjetivo - caloriasOcupadas;
+        double gramasDeCarbo = caloriasDisponiveisParaCarbo / 4;
+        System.out.printf("Sua dieta deve ter %.2f g Proteína || %.2f g Gordura || %.2f Carboídrato", gramasDeProteina, gramasDeGordura, gramasDeCarbo);
     }
 }
 
