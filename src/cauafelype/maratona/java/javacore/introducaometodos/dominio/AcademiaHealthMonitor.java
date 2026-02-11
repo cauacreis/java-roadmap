@@ -137,6 +137,7 @@ public class AcademiaHealthMonitor {
         double caloriasOcupadas = caloriasProteina + caloriasGordura;
         double caloriasDisponiveisParaCarbo = aluno.caloriasObjetivo - caloriasOcupadas;
         double gramasDeCarbo = caloriasDisponiveisParaCarbo / 4;
+        System.out.println("Estes são os valores iniciais para seu objetivo!");
         System.out.printf("Sua dieta deve ter %.2f g Proteína || %.2f g Gordura || %.2f Carboídrato", gramasDeProteina, gramasDeGordura, gramasDeCarbo);
     }
 }
