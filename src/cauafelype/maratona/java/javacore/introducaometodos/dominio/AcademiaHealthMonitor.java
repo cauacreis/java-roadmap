@@ -140,5 +140,18 @@ public class AcademiaHealthMonitor {
         System.out.println("Estes são os valores iniciais para seu objetivo!");
         System.out.printf("Sua dieta deve ter %.2f g Proteína || %.2f g Gordura || %.2f Carboídrato", gramasDeProteina, gramasDeGordura, gramasDeCarbo);
     }
+    public static void processandoDados() {
+        System.out.println("-----------------------------");
+        System.out.print("Processando dados");
+        try {
+            for (int i = 0; i < 3; i++){
+                Thread.sleep(800);
+                System.out.print(".");
+            }
+            System.out.println();
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+    }
 }
 

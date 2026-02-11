@@ -56,6 +56,7 @@ public class HealthMonitorTeste {
                     System.out.println("Digite um objetivo válido, de 1 a 3");
                 }
             }
+            AcademiaHealthMonitor.processandoDados();
             AcademiaHealthMonitor.calculadoraIMC(aluno);
             AcademiaHealthMonitor.divisaoDeTexto();
             AcademiaHealthMonitor.classificacaoDeIMC(aluno);
