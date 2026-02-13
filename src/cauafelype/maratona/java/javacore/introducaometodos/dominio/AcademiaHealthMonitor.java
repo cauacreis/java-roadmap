@@ -4,77 +4,77 @@ import cauafelype.maratona.java.javacore.introducaoclasse.dominio.AlunoAcademiaC
 
 public class AcademiaHealthMonitor {
     public static void calculadoraIMC(AlunoAcademiaClasse aluno) {
-        aluno.imc = aluno.peso / (aluno.alturaEmMetros * aluno.alturaEmMetros);
-        System.out.printf("O IMC do aluno %s é: %.2f%n", aluno.nome, aluno.imc);
+        aluno.setImc(aluno.getPeso() / (aluno.getAlturaEmMetros() * aluno.getAlturaEmMetros()));
+        System.out.printf("O IMC do aluno %s é: %.2f%n", aluno.getNome(), aluno.getImc());
     }
 
     public static void classificacaoDeIMC(AlunoAcademiaClasse aluno) {
-        if (aluno.imc < 18.5) {
-            System.out.printf("A classificação do aluno %s é: Magreza%n", aluno.nome);
+        if (aluno.getImc() < 18.5) {
+            System.out.printf("A classificação do aluno %s é: Magreza%n", aluno.getNome());
 
-        } else if (aluno.imc < 25) {
-            System.out.printf("A classificação do aluno %s é: Peso Normal%n", aluno.nome);
+        } else if (aluno.getImc() < 25) {
+            System.out.printf("A classificação do aluno %s é: Peso Normal%n", aluno.getNome());
 
-        } else if (aluno.imc < 30) {
-            System.out.printf("A classificação do aluno %s é: Sobrepeso%n", aluno.nome);
+        } else if (aluno.getImc() < 30) {
+            System.out.printf("A classificação do aluno %s é: Sobrepeso%n", aluno.getNome());
 
-        } else if (aluno.imc < 35) {
-            System.out.printf("A classificação do aluno %s é: Obesidade%n", aluno.nome);
+        } else if (aluno.getImc() < 35) {
+            System.out.printf("A classificação do aluno %s é: Obesidade%n", aluno.getNome());
 
         } else {
-            System.out.printf("A classificação do aluno %s é: Obesidade Grave%n", aluno.nome);
+            System.out.printf("A classificação do aluno %s é: Obesidade Grave%n", aluno.getNome());
         }
     }
 
     public static void taxaMetabolicaBasal(AlunoAcademiaClasse aluno) {
         int alturaEmCm;
-        alturaEmCm = (int) (aluno.alturaEmMetros * 100);
-        if (aluno.sexo.equalsIgnoreCase("M")) {
-            aluno.taxaMetabolicaTMB = 66 + (13.7 * aluno.peso) + (5 * alturaEmCm) - (6.8 * aluno.idade);
-            System.out.println("Essa é sua taxa metabólica basal: " + aluno.taxaMetabolicaTMB);
+        alturaEmCm = (int) (aluno.getAlturaEmMetros() * 100);
+        if (aluno.getSexo().equalsIgnoreCase("M")) {
+            aluno.setTaxaMetabolicaTMB(66 + (13.7 * aluno.getPeso()) + (5 * alturaEmCm) - (6.8 * aluno.getIdade()));
+            System.out.println("Essa é sua taxa metabólica basal: " + aluno.getTaxaMetabolicaTMB());
         } else {
-            aluno.taxaMetabolicaTMB = 655 + (9.6 * aluno.peso) + (1.8 * alturaEmCm) - (4.7 * aluno.idade);
-            System.out.println("Essa é sua taxa metabólica basal: " + aluno.taxaMetabolicaTMB + "KCAL");
+            aluno.setTaxaMetabolicaTMB(655 + (9.6 * aluno.getPeso()) + (1.8 * alturaEmCm) - (4.7 * aluno.getIdade()));
+            System.out.println("Essa é sua taxa metabólica basal: " + aluno.getTaxaMetabolicaTMB() + "KCAL");
         }
     }
 
     public static void fatorDeAtividade(AlunoAcademiaClasse aluno) {
-        double fatorAtividade = switch (aluno.frequenciaAtividade) {
+        double fatorAtividade = switch (aluno.getFrequenciaAtividade()) {
             case 2 -> 1.375;
             case 3 -> 1.55;
             case 4 -> 1.725;
             default -> 1.2;
         };
-        aluno.gastoTotal = aluno.taxaMetabolicaTMB * fatorAtividade;
-        System.out.printf("Você gasta em média essa quantidade de calorias por dia, baseado no seu nível de atividade: %.2f KCAL%n", aluno.gastoTotal);
+        aluno.setGastoTotal(aluno.getTaxaMetabolicaTMB() * fatorAtividade);
+        System.out.printf("Você gasta em média essa quantidade de calorias por dia, baseado no seu nível de atividade: %.2f KCAL%n", aluno.getGastoTotal());
     }
 
     public static void consumirAgua(AlunoAcademiaClasse aluno) {
-        double agua = aluno.peso * 50;
+        double agua = aluno.getPeso() * 50;
         System.out.println("Você deve consumir essa quantidade de água por dia: " + agua + "ML");
     }
 
     public static void objetivo(AlunoAcademiaClasse aluno) {
-        switch (aluno.objetivo) {
+        switch (aluno.getObjetivo()) {
             case 1 -> {
                 System.out.println("Você deve começar um déficit calórico de 50 calorias por semana, diminua até chegar 500 calorias a menos: ");
-                aluno.caloriasObjetivo = aluno.gastoTotal - 500;
-                System.out.printf("O máximo de déficit a ser alcançado é: %.2f KCAL%n", aluno.caloriasObjetivo);
+                aluno.setCaloriasObjetivo(aluno.getGastoTotal() - 500);
+                System.out.printf("O máximo de déficit a ser alcançado é: %.2f KCAL%n", aluno.getCaloriasObjetivo());
             }
             case 2 -> {
                 System.out.println("Você deve começar um processo de bulking, aumente 50 calorias por semana, até chegar 500 calorias a mais");
-                aluno.caloriasObjetivo = aluno.gastoTotal + 500;
-                System.out.printf("O máximo de bulking a ser alcançado é: %.2f KCAL%n", aluno.caloriasObjetivo);
+                aluno.setCaloriasObjetivo(aluno.getGastoTotal() + 500);
+                System.out.printf("O máximo de bulking a ser alcançado é: %.2f KCAL%n", aluno.getCaloriasObjetivo());
             }
             case 3 -> {
-                    aluno.caloriasObjetivo = aluno.gastoTotal;
-                    System.out.printf("Apenas consuma a quantidade necessária de calorias que você necessita: %.2f KCAL%n ", aluno.caloriasObjetivo);
+                    aluno.setCaloriasObjetivo(aluno.getGastoTotal());
+                    System.out.printf("Apenas consuma a quantidade necessária de calorias que você necessita: %.2f KCAL%n ", aluno.getCaloriasObjetivo());
             }
         }
     }
 
     public static void treinoAluno(AlunoAcademiaClasse aluno) {
-        switch (aluno.objetivo) {
+        switch (aluno.getObjetivo()) {
             case 1 -> {
                 System.out.println("OBJETIVO: EMAGRECIMENTO (PERDA DE GORDURA)");
                 System.out.println("Estilo: Circuito Metabólico (Descanso curto: 30s)");
@@ -130,12 +130,12 @@ public class AcademiaHealthMonitor {
     }
     public static void calcularMacros(AlunoAcademiaClasse aluno) {
         System.out.println("Vamos calcular o seu MACRO nutricional: ");
-        double gramasDeProteina = aluno.peso * 2;
+        double gramasDeProteina = aluno.getPeso() * 2;
         double caloriasProteina = gramasDeProteina * 4;
-        double gramasDeGordura = aluno.peso * 1;
+        double gramasDeGordura = aluno.getPeso() * 1;
         double caloriasGordura = gramasDeGordura * 9;
         double caloriasOcupadas = caloriasProteina + caloriasGordura;
-        double caloriasDisponiveisParaCarbo = aluno.caloriasObjetivo - caloriasOcupadas;
+        double caloriasDisponiveisParaCarbo = aluno.getCaloriasObjetivo() - caloriasOcupadas;
         double gramasDeCarbo = caloriasDisponiveisParaCarbo / 4;
         System.out.println("Estes são os valores iniciais para seu objetivo!");
         System.out.printf("Sua dieta deve ter %.2f g Proteína || %.2f g Gordura || %.2f Carboídrato", gramasDeProteina, gramasDeGordura, gramasDeCarbo);

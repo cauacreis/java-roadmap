@@ -14,16 +14,16 @@ public class HealthMonitorTeste {
 
         while (continuar.equalsIgnoreCase("S")) {
             System.out.println("Digite o seu nome: ");
-            aluno.nome = input.nextLine();
+            aluno.setNome(input.nextLine());
             System.out.println("Digite o seu peso: (Kg)");
-            aluno.peso = input.nextDouble();
+            aluno.setPeso(input.nextDouble());
             System.out.println("Digite a sua altura: (Metros)");
-            aluno.alturaEmMetros = input.nextDouble();
+            aluno.setAlturaEmMetros(input.nextDouble());
             input.nextLine();
             while (true) {
                 System.out.println("Digite seu sexo: (M ou F)");
-                aluno.sexo = input.nextLine();
-                if (aluno.sexo.equalsIgnoreCase("M") || aluno.sexo.equalsIgnoreCase("F")) {
+                aluno.setSexo(input.nextLine());
+                if (aluno.getSexo().equalsIgnoreCase("M") || aluno.getSexo().equalsIgnoreCase("F")) {
                     break;
                 } else {
                     System.out.println("Digite uma letra válida, M ou F");
@@ -31,8 +31,8 @@ public class HealthMonitorTeste {
             }
             while (true) {
                 System.out.println("Digite a sua idade: ");
-                aluno.idade = input.nextInt();
-                if (aluno.idade > 0) {
+                aluno.setIdade(input.nextInt());
+                if (aluno.getIdade() > 0) {
                     break;
                 } else {
                     System.out.println("Digite uma idade válida, que seja maior que 0!");
@@ -40,8 +40,8 @@ public class HealthMonitorTeste {
             }
             while (true) {
                 System.out.println("Digite sua frequência de atividades: (1 a 4)");
-                aluno.frequenciaAtividade = input.nextInt();
-                if (aluno.frequenciaAtividade < 5 && aluno.frequenciaAtividade > 0) {
+                aluno.setFrequenciaAtividade(input.nextInt());
+                if (aluno.getFrequenciaAtividade() < 5 && aluno.getFrequenciaAtividade() > 0) {
                     break;
                 } else {
                     System.out.println("Digite uma frequência válida, de 1 a 4!");
@@ -49,8 +49,8 @@ public class HealthMonitorTeste {
             }
             while (true) {
                 System.out.println("Agora me fale seu objetivo: (1 para emagrecer, 2 para ganhar massa, 3 para manter)");
-                aluno.objetivo = input.nextInt();
-                if (aluno.objetivo < 4 && aluno.objetivo > 0) {
+                aluno.setObjetivo(input.nextInt());
+                if (aluno.getObjetivo() < 4 && aluno.getObjetivo() > 0) {
                     break;
                 } else {
                     System.out.println("Digite um objetivo válido, de 1 a 3");
