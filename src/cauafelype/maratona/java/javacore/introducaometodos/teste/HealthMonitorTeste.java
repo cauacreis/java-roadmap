@@ -3,10 +3,11 @@ package cauafelype.maratona.java.javacore.introducaometodos.teste;
 import cauafelype.maratona.java.javacore.introducaoclasse.dominio.AlunoAcademiaClasse;
 import cauafelype.maratona.java.javacore.introducaometodos.dominio.AcademiaHealthMonitor;
 
+import java.io.IOException;
 import java.util.Scanner;
 
 public class HealthMonitorTeste {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         Scanner input = new Scanner(System.in);
         String continuar = "S";
         AlunoAcademiaClasse aluno = new AlunoAcademiaClasse();
@@ -72,7 +73,6 @@ public class HealthMonitorTeste {
             AcademiaHealthMonitor.treinoAluno(aluno);
             AcademiaHealthMonitor.divisaoDeTexto();
             AcademiaHealthMonitor.calcularMacros(aluno);
-
             System.out.println("\n-------------------------------------");
             System.out.println("Deseja utilizar o HealthMonitor denovo? (S para sim & N para não)");
             input.nextLine();
