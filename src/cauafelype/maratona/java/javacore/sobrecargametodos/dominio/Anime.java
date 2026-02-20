@@ -4,7 +4,16 @@ public class Anime {
     private String nome;
     private double nota;
     private String tipo;
-    private String eps;
+    private int eps;
+    private int temps;
+
+    public void imprime() {
+        System.out.println("Nome: " + this.nome);
+        System.out.println("Nota: " + this.nota);
+        System.out.println("Tipo: " + this.tipo);
+        System.out.println("Episódios: " + this.eps);
+        System.out.println("Temporadas: " + this.temps);
+    }
 
     public double getNota() {
         return nota;
@@ -30,11 +39,19 @@ public class Anime {
         this.tipo = tipo;
     }
 
-    public String getEps() {
+    public int getEps() {
         return eps;
     }
 
-    public void setEps(String eps) {
+    public void setEps(int eps) {
         this.eps = eps;
+    }
+
+    public int getTemps() {
+        return temps;
+    }
+
+    public void setTemps(int temps) {
+        this.temps = temps;
     }
 }
