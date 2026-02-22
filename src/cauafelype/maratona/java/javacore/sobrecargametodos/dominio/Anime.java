@@ -6,6 +6,7 @@ public class Anime {
     private String tipo;
     private int eps;
     private int temps;
+    private String genero;
 
     public void init(String nome, String tipo, double nota, int eps, int temps) {
         this.nome = nome;
@@ -14,12 +15,22 @@ public class Anime {
         this.eps = eps;
         this.temps = temps;
     }
+    public void init(String nome, String tipo, double nota, int eps, int temps, String genero) {
+        this.init(nome, tipo, nota, eps, temps);
+        this.genero = genero;
+    }
     public void imprime() {
         System.out.println("Nome: " + this.nome);
         System.out.println("Nota: " + this.nota);
         System.out.println("Tipo: " + this.tipo);
         System.out.println("Episódios: " + this.eps);
         System.out.println("Temporadas: " + this.temps);
+        if (this.genero != null) {
+            System.out.println("Genero: " + this.genero);
+        } else {
+            System.out.println("Não foi cadastrado o gênero desse anime");
+        }
+        System.out.println("------------------------------");
     }
 
     public double getNota() {
