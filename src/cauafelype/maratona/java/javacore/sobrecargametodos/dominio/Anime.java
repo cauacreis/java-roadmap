@@ -7,6 +7,13 @@ public class Anime {
     private int eps;
     private int temps;
 
+    public void init(String nome, String tipo, double nota, int eps, int temps) {
+        this.nome = nome;
+        this.tipo = tipo;
+        this.nota = nota;
+        this.eps = eps;
+        this.temps = temps;
+    }
     public void imprime() {
         System.out.println("Nome: " + this.nome);
         System.out.println("Nota: " + this.nota);
