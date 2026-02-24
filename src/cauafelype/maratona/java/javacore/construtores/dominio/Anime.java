@@ -1,4 +1,4 @@
-package cauafelype.maratona.java.javacore.sobrecargametodos.dominio;
+package cauafelype.maratona.java.javacore.construtores.dominio;
 
 public class Anime {
     private String nome;
