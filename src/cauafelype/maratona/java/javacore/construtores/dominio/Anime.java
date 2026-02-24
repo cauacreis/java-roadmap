@@ -6,9 +6,17 @@ public class Anime {
     private String tipo;
     private int eps;
     private int temps;
-    private final String genero;
+    private String genero;
 
-// toda vez que eu iniciar um novo objeto, isso vai ser imprimido
+// toda a vez que eu iniciar um novo objeto, isso vai ser imprimido
+    public Anime(String nome, double nota, String tipo, int eps, int temps) {
+        this.nome = nome;
+        this.nota = nota;
+        this.tipo = tipo;
+        this.eps = eps;
+        this.temps = temps;
+        System.out.println("Construtor");
+    }
     public Anime(String nome, double nota, String tipo, int eps, int temps, String genero) {
         this.nome = nome;
         this.nota = nota;
@@ -16,7 +24,7 @@ public class Anime {
         this.eps = eps;
         this.temps = temps;
         this.genero = genero;
-        System.out.println("Construtor");
+        System.out.println("Construtor, com sobrecarga de métodos! Mas ao invés de ser um método, é um construtor");
     }
 
     public void imprime() {
