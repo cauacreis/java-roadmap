@@ -8,7 +8,7 @@ public class Anime {
     private int temps;
     private String genero;
 
-// toda a vez que eu iniciar um novo objeto, isso vai ser imprimido
+// toda a vez que eu iniciar um novo objeto, isso vai ser impresso
     public Anime(String nome, double nota, String tipo, int eps, int temps) {
         this.nome = nome;
         this.nota = nota;
