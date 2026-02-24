@@ -6,24 +6,19 @@ public class Anime {
     private String tipo;
     private int eps;
     private int temps;
-    private String genero;
+    private final String genero;
 
 // toda vez que eu iniciar um novo objeto, isso vai ser imprimido
-    public Anime() {
+    public Anime(String nome, double nota, String tipo, int eps, int temps, String genero) {
+        this.nome = nome;
+        this.nota = nota;
+        this.tipo = tipo;
+        this.eps = eps;
+        this.temps = temps;
+        this.genero = genero;
         System.out.println("Construtor");
     }
 
-    public void init(String nome, String tipo, double nota, int eps, int temps) {
-        this.nome = nome;
-        this.tipo = tipo;
-        this.nota = nota;
-        this.eps = eps;
-        this.temps = temps;
-    }
-    public void init(String nome, String tipo, double nota, int eps, int temps, String genero) {
-        this.init(nome, tipo, nota, eps, temps);
-        this.genero = genero;
-    }
     public void imprime() {
         System.out.println("Nome: " + this.nome);
         System.out.println("Nota: " + this.nota);
