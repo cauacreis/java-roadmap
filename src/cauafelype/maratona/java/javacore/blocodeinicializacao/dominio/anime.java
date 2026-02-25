@@ -4,6 +4,7 @@ public class anime {
     String nome;
     private int[] eps;
 // bloco de inicialização de instância
+    // ele roda primeiro que os construtores, e pra fazer eles rodarem apenas uma vez é só colocar static antes das chaves
     {
         System.out.println("Dentro do bloco de inicialização");
         eps = new int[100];
