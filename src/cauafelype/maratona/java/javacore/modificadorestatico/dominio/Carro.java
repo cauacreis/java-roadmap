@@ -5,8 +5,8 @@ public class Carro {
     private String modelo;
     private double velocidadeMax;
     public static final double VELOCIDADE_LIMITE = 250;
-    // final significa que é imutável e não pertence ao objetio e sim a classe, ela é uma constante
-    // por isso ela é escrita em letra maíuscula e com underline
+    // final significa que é imutável e não pertence ao objetivo e sim a classe, ela é uma constante
+    // por isso ela é escrita em letra maíuscula e com underline,
     // mas você pode utilizar ele sem o final, para caso você deseja alterar o valor dele, fora do código domínio
 
     public Carro(String marca, String modelo, double velocidadeMax) {
