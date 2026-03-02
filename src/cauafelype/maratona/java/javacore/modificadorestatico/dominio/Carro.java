@@ -4,7 +4,7 @@ public class Carro {
     private String marca;
     private String modelo;
     private double velocidadeMax;
-    public static final double VELOCIDADE_LIMITE = 250;
+    private static double velocidadeLimite = 250;
     // final significa que é imutável e não pertence ao objetivo e sim a classe, ela é uma constante
     // por isso ela é escrita em letra maíuscula e com underline,
     // mas você pode utilizar ele sem o final, para caso você deseja alterar o valor dele, fora do código domínio
@@ -19,8 +19,14 @@ public class Carro {
         System.out.println("Marca: " + marca);
         System.out.println("Modelo: " + modelo);
         System.out.println("Velocidade max: " + velocidadeMax+ " Km/h");
-        System.out.println("Velocidade limite do acordo alemão entre cavalheiros: " + VELOCIDADE_LIMITE + " Km/h");
+        System.out.println("Velocidade limite do acordo alemão entre cavalheiros: " + getVelocidadeLimite() + " Km/h");
         System.out.println("--------------------------------------------------------------------");
+    }
+    public static void setVelocidadeLimite(double velocidadeLimite) {
+        Carro.velocidadeLimite = velocidadeLimite;
+    }
+    public  static double getVelocidadeLimite() {
+        return Carro.velocidadeLimite;
     }
     public String getMarca() {
         return marca;
