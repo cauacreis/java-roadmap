@@ -16,6 +16,12 @@ public class anime {
             eps[i] = i+1;
         }
     }
+    static {
+        System.out.println("Dentro do bloco de inicialização 2");
+    }
+    static {
+        System.out.println("Dentro do bloco de inicialização 3");
+    }
 
     public anime(String nome) {
         this.nome = nome;
