@@ -8,5 +8,8 @@ public class jogadorTeste {
         jogador jogador2 = new jogador("Menegate");
         jogador jogador3 = new jogador("pelé");
         jogador[] jogadores = {jogador1, jogador2, jogador3}; // posicao 0 pro jogador 1 e assim sucessivamente
+        for (int i = 0; i < jogadores.length; i++) {
+            jogadores[i].imprime();
+        }
     }
 }
