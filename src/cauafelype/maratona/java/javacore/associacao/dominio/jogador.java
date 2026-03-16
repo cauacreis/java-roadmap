@@ -7,6 +7,8 @@ public class jogador {
     public jogador(String nome) {
         this.nome = nome;
     }
+    public jogador() {
+    }
 
     public void imprime() {
         System.out.println("Nome: " + this.nome);

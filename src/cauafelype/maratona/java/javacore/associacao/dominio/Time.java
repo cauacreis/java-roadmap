@@ -7,6 +7,8 @@ public class Time {
     public Time(String nome) {
         this.nome = nome;
     }
+    public Time() {
+    }
 
     public void imprime() {
         System.out.println("--- Time: " + this.nome + " ---");
