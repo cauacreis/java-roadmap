@@ -1,5 +1,18 @@
 package cauafelype.maratona.java.javacore.associacao.dominio;
 
+// sistema que gerencie seminários
+// o sistema deverá cadastrar seminários, estudantes, professores e local onde será realizado
+// um aluno poderá estar em apenas um seminário 1:1
+// um seminário poderá ter nenhum ou vários alunos 0: N
+// um professor poderá ter vários seminários
+// um seminário deve ter um local
+
+// campos básicos excluindo relacionamentos
+// seminário: título
+// aluno: nome e idade
+// professor: nome, especialidade
+// local: endereço
+
 public class AlunoS {
     private String nome;
     private int idade;
