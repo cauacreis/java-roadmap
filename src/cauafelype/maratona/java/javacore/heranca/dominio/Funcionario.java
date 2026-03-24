@@ -4,7 +4,9 @@ public class Funcionario extends Pessoa {
     // dizendo que funcionarios tem todos os atributos e metodos de uma pessoa
     private double salario;
 
-    public Funcionario() {
+    public Funcionario(String nome, String cpf, double salario) {
+        super(nome, cpf);
+        this.salario = salario;
     }
 
     @Override

@@ -9,18 +9,13 @@ public class HerancaPessoaEndereco {
         Endereco endereco = new Endereco();
         endereco.setRua("Rua 1");
         endereco.setCep("12345");
-        Pessoa pessoa = new Pessoa();
-        pessoa.setNome("Maria");
-        pessoa.setCpf("1234567890");
+        Pessoa pessoa = new Pessoa("Pedro", "01234567891");
         pessoa.setEndereco(endereco);
         pessoa.imprime();
 
         System.out.println("\n ---- Divisa funcionario ------ \n");
 
-        Funcionario funcionario = new Funcionario();
-        funcionario.setNome("Maria");
-        funcionario.setCpf("1234567890");
-        funcionario.setSalario(2000);
+        Funcionario funcionario = new Funcionario("Fabricio", "01234567891", 2000);
         funcionario.setEndereco(endereco);
         funcionario.imprime();
     }

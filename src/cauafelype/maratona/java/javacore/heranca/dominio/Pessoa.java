@@ -11,6 +11,10 @@ public class Pessoa {
         System.out.println("Endereço da pessoa: "+this.endereco.getRua());
         System.out.println("Cep da pessoa: "+this.endereco.getCep());
     }
+    public Pessoa(String nome, String cpf) {
+        this.nome = nome;
+        this.cpf = cpf;
+    }
 
     public String getNome() {
         return nome;
