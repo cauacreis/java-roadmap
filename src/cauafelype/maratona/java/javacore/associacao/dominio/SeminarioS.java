@@ -15,7 +15,11 @@ public class SeminarioS {
 
     public void imprime() {
         System.out.println("Seminário: "+this.titulo);
-        System.out.println("Local: "+this.local.getEndereco());
+        if (this.local!=null){
+            System.out.println("Local: "+this.local.getEndereco());
+        } else {
+            System.out.println("Sem local definido");
+        }
         if (this.alunos != null) {
             for (int i = 0; i < this.alunos.length; i++) {
                 System.out.println("Aluno ("+i+"): "+this.alunos[i].getNome());

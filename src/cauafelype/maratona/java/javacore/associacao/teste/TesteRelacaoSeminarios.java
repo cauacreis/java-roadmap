@@ -3,7 +3,6 @@ package cauafelype.maratona.java.javacore.associacao.teste;
 import cauafelype.maratona.java.javacore.associacao.dominio.AlunoS;
 import cauafelype.maratona.java.javacore.associacao.dominio.LocalS;
 import cauafelype.maratona.java.javacore.associacao.dominio.SeminarioS;
-// Se for usar o professor, não esqueça de importar a classe dele também!
 import cauafelype.maratona.java.javacore.associacao.dominio.ProfessorS;
 
 public class TesteRelacaoSeminarios {
