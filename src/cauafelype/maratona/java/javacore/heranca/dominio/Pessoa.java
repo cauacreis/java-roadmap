@@ -1,10 +1,10 @@
 package cauafelype.maratona.java.javacore.heranca.dominio;
 
 public class Pessoa {
-    private String nome;
-    private String cpf;
-    private Endereco endereco;
-
+    protected String nome;
+    protected String cpf;
+    protected Endereco endereco;
+    // protected faz com que seja trancado para o mundo alterar e liberado para os filhos alterar(quem der extend e for do mesmo pacote)
     public void imprime() {
         System.out.println("Nome do pessoa: "+this.nome);
         System.out.println("CPF do pessoa: "+this.cpf);
