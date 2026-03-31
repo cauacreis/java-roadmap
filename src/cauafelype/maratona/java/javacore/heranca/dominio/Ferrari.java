@@ -9,9 +9,9 @@ public final class Ferrari extends Carro {
     }
 
 
-    // se o metodo imprime na classe pai, fosse final, o metodo seria inalteravel, mesma coisa quando coloca final numa variavel,seu valor
+    // se o metodo imprime na classe pai, fosse final, o metodo seria inalteravel, mesma coisa, quando coloca final numa variavel,seu valor
     // fica inalteravel
-    // agora numa classe, ela se torna a ultima da arvore genealogica dela
+    // agora numa classe, ela se torna a última da árvore genealogica dela
     @Override
     public void imprime() {
         super.imprime();
