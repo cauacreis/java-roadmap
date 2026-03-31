@@ -4,6 +4,12 @@ public class Pessoa {
     protected String nome;
     protected String cpf;
     protected Endereco endereco;
+    static {
+        System.out.println("Dentro do bloco de inicialização ESTÁTICO de Pessoa");
+    }
+    {
+        System.out.println("Dentro do bloco de inicialização de INSTÂNCIA de Pessoa");
+    }
     // protected faz com que seja trancado para o mundo alterar e liberado para os filhos alterar(quem der extend e for do mesmo pacote)
     public void imprime() {
         System.out.println("Nome do pessoa: "+this.nome);
@@ -12,6 +18,7 @@ public class Pessoa {
         System.out.println("Cep da pessoa: "+this.endereco.getCep());
     }
     public Pessoa(String nome, String cpf) {
+        System.out.println("dentro do construtor da pessoa");
         this.nome = nome;
         this.cpf = cpf;
     }
