@@ -11,5 +11,6 @@ public class CarroTeste01 {
         System.out.println("------------");
         Ferrari ferrari = new Ferrari("TAYCAN", "123-ABC", 2006, "SUV", 29999999);
         ferrari.imprime();
+        ferrari.calcularImposto();
     }
 }

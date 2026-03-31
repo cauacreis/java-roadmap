@@ -17,6 +17,9 @@ public final class Ferrari extends Carro {
         super.imprime();
         System.out.println("Este é o preço da sua ferrari: "+this.preco);
     }
+    public void calcularImposto(){
+        System.out.println("O imposto do carro é: "+(this.preco * 0.10));
+    }
 
     public double getPreco() {
         return preco;
