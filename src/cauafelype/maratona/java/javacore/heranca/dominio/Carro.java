@@ -1,6 +1,6 @@
 package cauafelype.maratona.java.javacore.heranca.dominio;
 
-public class Carro {
+public abstract class Carro {
     private String modelo;
     private String placa;
     private int ano;
@@ -16,6 +16,8 @@ public class Carro {
 
     public Carro() {
     }
+
+    public abstract void calcularImposto();
 
     public void imprime() {
         System.out.println("Este é o modelo do carro: "+this.modelo);
