@@ -27,6 +27,7 @@ public class Funcionario extends Pessoa {
     // só consegui criar esse metodo
     // pq os atributos são protected, ou seja,
     // quem é da família ou faz parte da herança, consegue acessar eles
+    // se fosse private, eles não ia conseguir acessar
 
     public double getSalario() {
         return salario;
