@@ -21,6 +21,13 @@ public class Funcionario extends Pessoa {
         System.out.println("Este é o salário do funcionário: "+this.salario);
     }
 
+    public void relatorioPagamento(){
+        System.out.println("Eu: "+this.nome +", "+"Do Cpf: "+this.cpf+", "+"Confirmo que recebi:  "+this.salario+" R$, de Salário");
+    }
+    // só consegui criar esse metodo
+    // pq os atributos são protected, ou seja,
+    // quem é da família ou faz parte da herança, consegue acessar eles
+
     public double getSalario() {
         return salario;
     }

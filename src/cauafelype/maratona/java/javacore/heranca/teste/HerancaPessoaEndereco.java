@@ -18,5 +18,6 @@ public class HerancaPessoaEndereco {
         Funcionario funcionario = new Funcionario("Fabricio", "01234567891", 2000);
         funcionario.setEndereco(endereco);
         funcionario.imprime();
+        funcionario.relatorioPagamento();
     }
 }
