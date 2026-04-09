@@ -17,9 +17,14 @@ public class Pessoa {
         System.out.println("Endereço da pessoa: "+this.endereco.getRua());
         System.out.println("Cep da pessoa: "+this.endereco.getCep());
     }
-    public Pessoa(String nome, String cpf) {
-        System.out.println("dentro do construtor da pessoa");
+
+    // outro construtor de exemplo
+    public Pessoa (String nome) {
         this.nome = nome;
+    }
+    public Pessoa(String nome, String cpf) {
+        this(nome); //isso vc puxar o outro construtor
+        System.out.println("dentro do construtor da pessoa");
         this.cpf = cpf;
     }
 

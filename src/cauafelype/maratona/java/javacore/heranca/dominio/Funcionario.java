@@ -9,8 +9,12 @@ public class Funcionario extends Pessoa {
     {
         System.out.println("Dentro do bloco de inicialização de INSTÂNCIA de Funcionario");
     }
+
     public Funcionario(String nome, String cpf, double salario) {
         super(nome, cpf);
+        // se tu quiser chamar o construtor que tem uma variável em específico, segue na outra linha de construtor em pessoa
+        // você pode fazer: this(nome);
+        // e sempre tem q ser a primeira do construtor, seja esse this ou o super
         System.out.println("dentro do construtor do funcionário");
         this.salario = salario;
     }
