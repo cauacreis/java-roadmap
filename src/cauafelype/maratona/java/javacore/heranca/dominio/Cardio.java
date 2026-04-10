@@ -3,7 +3,7 @@ package cauafelype.maratona.java.javacore.heranca.dominio;
 public class Cardio extends AtividadeFisica{
     private double distanciaEmKm;
 
-    public Cardio(String nome, int duracaoMinutos) {
+    public Cardio(String nome, int duracaoMinutos, double distanciaEmKm) {
         super(nome, duracaoMinutos);
         this.distanciaEmKm = distanciaEmKm;
     }
