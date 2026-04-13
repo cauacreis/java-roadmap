@@ -14,5 +14,6 @@ public class AtividadeFisicaTeste01 {
             System.out.println("------------");
         }
         System.out.println("Programa finalizado!");
+        cardioHoje.aquecimentoPadrao();
     }
 }

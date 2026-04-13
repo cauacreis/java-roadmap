@@ -4,13 +4,16 @@ public abstract class AtividadeFisica {
     protected String nome;
     protected int duracaoMinutos;
 
-    // cria uma regra universal pra todas as classes filhas
+    // cria uma regra universal para todas as classes filhas
     // significa que todas elas devem criar o metodo exibirDetalhes do jeito delas
     public abstract void exibirDetalhes();
 
     public AtividadeFisica(String nome, int duracaoMinutos) {
         this.nome = nome;
         this.duracaoMinutos = duracaoMinutos;
+    }
+    public final void aquecimentoPadrao() {
+        System.out.println("Você é obrigado a fazer 5 minutos de alongamento e mobilidade!");
     }
 
     public String getNome() {
