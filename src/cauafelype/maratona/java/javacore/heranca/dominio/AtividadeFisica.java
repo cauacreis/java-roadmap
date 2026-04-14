@@ -4,6 +4,9 @@ public abstract class AtividadeFisica {
     protected String nome;
     protected int duracaoMinutos;
 
+    static {
+        System.out.println("1- Lendo a planta de atividade física");
+    }
     // cria uma regra universal para todas as classes filhas
     // significa que todas elas devem criar o metodo exibirDetalhes do jeito delas
     public abstract void exibirDetalhes();
