@@ -2,7 +2,15 @@ package cauafelype.maratona.java.javacore.heranca.dominio;
 
 public class Musculacao extends AtividadeFisica{
     private String grupoMuscular;
+    static {
+        System.out.println("5- lendo a planta");
+    }
 
+    {
+        System.out.println("6- Bloco de instância");
+    }
+
+    // 7- Construtor
     public Musculacao(String nome, int duracaoMinutos, String grupoMuscular) {
         super(nome, duracaoMinutos);
         this.grupoMuscular = grupoMuscular;
