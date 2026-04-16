@@ -12,9 +12,11 @@ public abstract class Robo {
         this.nome = nome;
     }
 
+    public abstract void carregarDados();
+
     public abstract void atacar();
 
-    protected final void recarregarBateria() {
+    public final void recarregarBateria() {
         this.nivelBateria = 100;
     }
 

@@ -9,7 +9,23 @@ public class RoboCombate extends Robo {
     }
 
     @Override
+    public void carregarDados() {
+        System.out.println("--- Carregando dados do robo de ataque ---");
+        System.out.println("Nome: " + this.nome);
+        System.out.println("Poder de Fogo: " + this.poderDeFogo);
+        System.out.println("Nível de bateria: "+ this.nivelBateria);
+    }
+
+    @Override
     public void atacar() {
-        System.out.println("O robo efetuou um ataque com poder de fogo: "+poderDeFogo+"DMG");
+        System.out.println("O robo efetuou um ataque com poder de fogo: "+poderDeFogo+"DMG\n");
+    }
+
+    public int getPoderDeFogo() {
+        return poderDeFogo;
+    }
+
+    public void setPoderDeFogo(int poderDeFogo) {
+        this.poderDeFogo = poderDeFogo;
     }
 }
