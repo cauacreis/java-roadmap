@@ -1,13 +1,12 @@
 package cauafelype.maratona.java.javacore.heranca.dominio;
 import java.util.Scanner;
 
-public class Conta {
-    protected double saldo;
+public abstract class Conta {
+    protected double saldo = 0;
     protected int numero;
 
     public Conta(int numero) {
         this.numero = numero;
-        saldo = 0;
     }
 
     public final void depositar(double valor){
@@ -15,14 +14,15 @@ public class Conta {
         System.out.println("Digite o valor depositado: ");
         saldo += valor;
     }
-    public final void sacar(double valor){
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Digite o valor sacado: ");
-        saldo -= valor;
-    }
+    public abstract void sacar();
 
     public double getSaldo() {
         return saldo;
+    }
+
+    public void imprimirSaldo() {
+        System.out.println("Este é seu saldo: "+saldo);
+        System.out.println("Este é o número da sua conta: "+numero);
     }
 
     public void setSaldo(double saldo) {
