@@ -7,6 +7,7 @@ public class Anime {
     public String toString() {
         return "Anime: "+this.nome;
     }
+    // esse método aparece no alt insert também, e ele tem variedades dele mesmo
 
     public Anime(String nome) {
         this.nome = nome;
