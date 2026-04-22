@@ -5,7 +5,7 @@ public class Anime {
 
     @Override
     public String toString() {
-        return nome;
+        return "Anime: "+this.nome;
     }
 
     public Anime(String nome) {
