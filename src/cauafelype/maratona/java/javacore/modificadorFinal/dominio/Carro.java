@@ -3,8 +3,11 @@ package cauafelype.maratona.java.javacore.modificadorFinal.dominio;
 public class Carro {
     private String nome;
     public static final double VELOCIDADE_LIMITE = 250;
-    private final Comprador COMPRADOR = new Comprador();
+    public final Comprador COMPRADOR = new Comprador();
 
+    public Comprador getCOMPRADOR() {
+        return COMPRADOR;
+    }
 
     public String getNome() {
         return nome;

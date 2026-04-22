@@ -8,5 +8,8 @@ public class CarroTeste01 {
         carro.setNome("Hillux");
         System.out.println("Nome: " + carro.getNome());
         System.out.println("Velocidade limite: "+Carro.VELOCIDADE_LIMITE);
+        carro.COMPRADOR.setNome("Kuririn");
+        System.out.println(carro.COMPRADOR);
+
     }
 }
