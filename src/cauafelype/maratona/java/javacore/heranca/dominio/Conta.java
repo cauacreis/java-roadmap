@@ -10,11 +10,9 @@ public abstract class Conta {
     }
 
     public final void depositar(double valor){
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Digite o valor depositado: ");
         saldo += valor;
     }
-    public abstract void sacar();
+    public abstract void sacar(double valor);
 
     public double getSaldo() {
         return saldo;

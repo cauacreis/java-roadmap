@@ -9,9 +9,10 @@ public class ContaCorrente extends Conta{
     }
 
     @Override
-    public void sacar() {
-        if (limiteChequeEspecial <= saldo) {
+    public void sacar(double valor) {
+        if (saldo + limiteChequeEspecial >= valor) {
             System.out.println("Saque realizado");
+            saldo -= valor;
         } else {
             System.out.println("Saldo insuficiente, mesmo com o cheque especial");
         }
