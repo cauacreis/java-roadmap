@@ -5,3 +5,9 @@ public enum TipoConta {
     CORRENTE,
     SALARIO,
 }
+// enum é utilizado para sistemas pequenos
+// agora o polimorfismo é utilizado para sistemas maiores
+// No mercado de trabalho, a Opção B (Polimorfismo) é a mais usada para sistemas gigantes,
+// porque se o banco inventar a "Conta Salário", você não precisa abrir a classe Conta original
+// e botar mais um else if. Você só cria um filho novo! Mas para sistemas menores,
+// a Opção A (com Enum) é super rápida e resolve o problema muito bem.
