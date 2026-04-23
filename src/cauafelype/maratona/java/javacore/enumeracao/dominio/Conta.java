@@ -23,12 +23,12 @@ public class Conta {
     }
 
     public final void depositar(double valor) {
+        System.out.println("Depositando "+valor);
         saldo += valor;
     }
 
     public void sacar(double valor) {
         if (this.tipo == TipoConta.CORRENTE) {
-            // Regra da Conta Corrente
             if (saldo + limiteChequeEspecial >= valor) {
                 System.out.println("Saque da Corrente realizado!");
                 saldo -= valor;
@@ -43,6 +43,14 @@ public class Conta {
                 saldo -= valor;
             } else {
                 System.out.println("Saldo da poupança insuficiente!");
+            }
+
+        } else if (this.tipo == TipoConta.SALARIO) {
+            if (saldo >= valor) {
+                System.out.println("Saque da Salario realizado!");
+                saldo -= valor;
+            } else {
+                System.out.println("Saldo insuficiente, mesmo com limite.");
             }
         }
     }
