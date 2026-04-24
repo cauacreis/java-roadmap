@@ -17,8 +17,36 @@ public class Atleta {
         this.altura = altura;
     }
 
-    public void calcularCalorias() {
+    public double calcularCalorias() {
+        // 1. Calcular BMR (assumindo homem)
+        double bmr = (10 * peso) + (6.25 * altura) - (5 * idade) + 5;
 
+        // 2. Definir fator de atividade com base no nível
+        double fator;
+
+        switch (nivelTreino) {
+            case SEDENTARIO:
+                fator = 1.2;
+                break;
+            case INICIANTE:
+                fator = 1.375;
+                break;
+            case INTERMEDIARIO:
+                fator = 1.55;
+                break;
+            case AVANCADO:
+                fator = 1.725;
+                break;
+            case ATLETA:
+                fator = 1.9;
+                break;
+            default:
+                fator = 1.2;
+        }
+        System.out.println("Quantidade de calorias: " + bmr);
+
+        // 3. Calcular TDEE
+        return bmr * fator;
     }
 
     @Override
@@ -28,6 +56,8 @@ public class Atleta {
                 ", modalidadeDeTreino='" + modalidadeDeTreino + '\'' +
                 ", idade=" + idade +
                 ", nivelTreino=" + nivelTreino +
+                ", peso=" + peso +
+                ", altura=" + altura +
                 '}';
     }
 
