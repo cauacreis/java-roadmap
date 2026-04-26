@@ -4,7 +4,7 @@ public enum Raridade {
     MILITAR(1.5),
     RESTRITO(3.0),
     SECRETO(5.5),
-    OCULTO(10.0),
+    OCULTO(10.0);
 
     private double multiplicadorDePreco;
 
