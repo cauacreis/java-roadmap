@@ -6,17 +6,32 @@ public class TipoPagamento {
         public double calcularTaxa(double valor) {
             return valor * 0.10;
         }
-    }
+    },
     CREDITO {
-
-    }
+        @Override
+        public double calcularTaxa(double valor) {
+            return valor * 1.10;
+        }
+    },
     DEBITO{
-
-    }
+        @Override
+        public double calcularTaxa(double valor) {
+            return valor;
+        }
+    },
     BOLETO{
-
-    }
+        @Override
+        public double calcularTaxa(double valor) {
+            return valor;
+        }
+    },
     CHEQUE{
+        @Override
+        public double calcularTaxa(double valor) {
+            return valor * 0.;
+        }
+    };
 
-    }
+    public abstract double calcularTaxa(double valor);
+
 }
