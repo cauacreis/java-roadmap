@@ -1,6 +1,6 @@
 package cauafelype.maratona.java.javacore.enumeracao.dominio;
 
-public class TipoPagamento {
+public enum TipoPagamento {
     PIX {
         @Override
         public double calcularTaxa(double valor) {
@@ -28,7 +28,7 @@ public class TipoPagamento {
     CHEQUE{
         @Override
         public double calcularTaxa(double valor) {
-            return valor * 0.;
+            return valor;
         }
     };
 
