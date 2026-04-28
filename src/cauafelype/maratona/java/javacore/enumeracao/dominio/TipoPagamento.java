@@ -4,7 +4,7 @@ public enum TipoPagamento {
     PIX {
         @Override
         public double calcularTaxa(double valor) {
-            return valor * 0.10;
+            return valor * 0.90;
         }
     },
     CREDITO {
