@@ -6,23 +6,22 @@ public enum StatusPedido {
     SAIU_PRA_ENTREGA(3),
     ENTREGUE(4);
 
-    private double codigoBanco;
+    private int codigoBanco;
 
-    StatusPedido(double codigoBanco) {
+    StatusPedido(int codigoBanco) {
         this.codigoBanco = codigoBanco;
     }
 
-    public static StatusPedido valueOf(double codigoBanco) {
+    public static StatusPedido buscaPorCodigo(int codigoBanco) {
         for (StatusPedido s : StatusPedido.values()) {
             if (s.codigoBanco == codigoBanco) {
                 return s;
-            } else {
-                return null;
             }
         }
+        return null;
     }
 
-    public double getCodigoBanco() {
+    public int getCodigoBanco() {
         return codigoBanco;
     }
 }
