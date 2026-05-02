@@ -1,5 +1,4 @@
-package cauafelype.maratona.java;
-import java.util.Scanner;
+package cauafelype.maratona.java.introducao;
 import java.util.ArrayList;
 import java.util.List;
 
