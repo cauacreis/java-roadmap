@@ -12,11 +12,7 @@ public class SkinCS2 {
     }
 
     public double calcularPrecoSkin(){
-        double precoRaridade;
-        precoRaridade = precoBase*this.raridades.getMultiplicadorDePreco();
-        System.out.println("Preco base: "+precoBase);
-        System.out.println("Preco baseado na raridade: " + precoRaridade);
-        return precoRaridade;
+        return this.precoBase * this.raridades.getMultiplicadorDePreco();
     }
 
     @Override
