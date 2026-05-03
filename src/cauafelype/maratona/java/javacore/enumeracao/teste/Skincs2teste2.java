@@ -99,6 +99,8 @@ public class Skincs2teste2 {
         double valorTotalDoCarrinho = carrinhoDeCompras.stream()
                 .mapToDouble(skin -> skin.calcularPrecoSkin())
                 .sum();
+        // .mapToDouble(SkinCS2::calcularPrecoSkin) // Jeito mais curto, sem usar lambda e sim reference method
+        // .sum
         System.out.println("\n💸 --- FECHAMENTO DO CAIXA ---");
         System.out.println("O valor total do seu inventário com as taxas da Steam é: R$ " + valorTotalDoCarrinho);
     }
