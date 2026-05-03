@@ -95,5 +95,11 @@ public class Skincs2teste2 {
         carrinhoDeCompras.stream()
                 .filter(skin -> skin.getNome().startsWith("A"))
                 .forEach(skin -> System.out.println(" 🎯 " + skin.getNome()));
+
+        double valorTotalDoCarrinho = carrinhoDeCompras.stream()
+                .mapToDouble(skin -> skin.calcularPrecoSkin())
+                .sum();
+        System.out.println("\n💸 --- FECHAMENTO DO CAIXA ---");
+        System.out.println("O valor total do seu inventário com as taxas da Steam é: R$ " + valorTotalDoCarrinho);
     }
 }
