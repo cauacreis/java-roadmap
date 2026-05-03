@@ -91,5 +91,9 @@ public class Skincs2teste2 {
                         " | Valor c/ Taxa: R$ " + skin.calcularPrecoSkin())
             )
         );
+        System.out.println("\n🅰️ --- ARMAS COM A LETRA 'A' ---");
+        carrinhoDeCompras.stream()
+                .filter(skin -> skin.getNome().startsWith("A"))
+                .forEach(skin -> System.out.println(" 🎯 " + skin.getNome()));
     }
 }
