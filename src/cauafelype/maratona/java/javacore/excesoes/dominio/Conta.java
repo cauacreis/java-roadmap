@@ -19,7 +19,15 @@ public class Conta {
         System.out.println("Saldo atual: "+saldo);
     }
 
-    
+    public void sacar(double valor) {
+        System.out.println("Processando o seu saque: ");
+        if (saldo < valor) {
+            System.out.println("Saldo insuficiente");
+            return;
+        }
+        this.saldo -= valor;
+        System.out.println("Saldo atual, após o saque: "+saldo);
+    }
 
     public String getTitular() {
         return titular;
