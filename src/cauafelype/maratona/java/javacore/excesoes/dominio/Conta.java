@@ -13,6 +13,14 @@ public class Conta {
         this.tipo = tipo;
     }
 
+    public void depositar (double valor) {
+        System.out.println("Depositando "+valor);
+        this.saldo += valor;
+        System.out.println("Saldo atual: "+saldo);
+    }
+
+    
+
     public String getTitular() {
         return titular;
     }
