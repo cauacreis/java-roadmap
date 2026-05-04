@@ -22,8 +22,7 @@ public class Conta {
     public void sacar(double valor) {
         System.out.println("Processando o seu saque: ");
         if (saldo < valor) {
-            System.out.println("Saldo insuficiente");
-            return;
+            throw new SaldoInsuficienteException("🚨 Calote detectado! Tentativa de sacar R$ " + valor + ", mas o saldo é só R$ " + this.saldo);
         }
         this.saldo -= valor;
         System.out.println("Saldo atual, após o saque: "+saldo);
