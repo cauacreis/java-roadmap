@@ -15,5 +15,7 @@ public class ContaTeste02 {
             System.out.println("Sistema do banco detectou um erro: ");
             System.out.println(e.getMessage());
         }
+        System.out.println("O saldo final da sua conta é: "+contaFelype.getSaldo());
+        System.out.println("Sistema sendo encerrado...");
     }
 }
