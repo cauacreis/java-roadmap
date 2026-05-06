@@ -17,7 +17,12 @@ public class TesteFileReader03 {
                 // se a mensagem vier de um banco de dados da oracle por exemplo, se eu jogar minha mensagem por cima,
                 // a mensagem original da oracle desaparece eternamente e eu perco meu tempo tentando achar o pq o banco n funciona
                 // como por exemplo, o banco poderia retornar que a tabela x não existe
-                // mas com a mensagem específica nossa, só falaria que não conseguiu acessar
+                // mas com a mensagem específica nossa, só falaria que não conseguiu acessar, pra resolver isso, poderiamos
+                // usar o encadeamento de excessões
+            //} catch (SQLException e) {
+                // Olha o 'e' ali no final! Você "empacota" o erro original dentro do seu!
+            //    throw new BancoDeDadosException("Erro crítico ao salvar o saque no DevBank", e);
+            //}
             }
         } catch (SQLException | IOException e) {
             System.out.println("Erro crítico (banco de dados ou arquivo)! \ndetalhe: "+e.getMessage());
