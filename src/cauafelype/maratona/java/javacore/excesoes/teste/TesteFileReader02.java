@@ -5,7 +5,7 @@ import java.io.FileReader;
 import java.io.IOException;
 
 public class TesteFileReader02 {
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) {
         try (FileReader arquivo = new FileReader("C:/relatorio.txt")) {
             System.out.println("Lendo o relatorio.txt da pasta");
             System.out.println("Relatorio lido com sucesso!");
