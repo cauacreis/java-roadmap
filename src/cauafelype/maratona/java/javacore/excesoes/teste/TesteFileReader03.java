@@ -23,6 +23,9 @@ public class TesteFileReader03 {
                 // Olha o 'e' ali no final! Você "empacota" o erro original dentro do seu!
             //    throw new BancoDeDadosException("Erro crítico ao salvar o saque no DevBank", e);
             //}
+                // Quando isso explodir no console do servidor, vai aparecer:
+                // BancoDeDadosException: Erro crítico ao salvar o saque no DevBank
+                // Caused by (Causado por): SQLException: Tabela X não existe no Oracle.
             }
         } catch (SQLException | IOException e) {
             System.out.println("Erro crítico (banco de dados ou arquivo)! \ndetalhe: "+e.getMessage());
