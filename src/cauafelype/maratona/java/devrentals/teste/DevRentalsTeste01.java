@@ -25,6 +25,9 @@ public class DevRentalsTeste01 {
 
         ContratoAluguel alugarPlacaDeVideo = new ContratoAluguel(equipamentoParaAlugar, hoje, devolucao7Dias);
 
-        System.out.println("Equipamento: " + alugarPlacaDeVideo.getEquipamento().getNome());
+        System.out.println("Equipamento: " + alugarPlacaDeVideo.getEquipamentos().getNome());
+        System.out.println("Esta é a data de retirada: "+alugarPlacaDeVideo.getDataRetirada());
+        System.out.println("Esta é a data para devolução: "+alugarPlacaDeVideo.getDataDevolucao());
+        System.out.println("Este é o preço a pagar pelo aluguel de 7 dias: "+alugarPlacaDeVideo.calcularValorTotal());
     }
 }
