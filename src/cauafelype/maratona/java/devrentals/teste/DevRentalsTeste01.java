@@ -34,6 +34,6 @@ public class DevRentalsTeste01 {
         } catch (EquipamentoIndisponivelException e) {
             System.out.println(e.getMessage());
         }
-
+        System.out.println("\nDevRentals: Sistema operando normalmente.");
     }
 }
