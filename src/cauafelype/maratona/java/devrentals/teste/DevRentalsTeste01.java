@@ -1,9 +1,6 @@
 package cauafelype.maratona.java.devrentals.teste;
 
-import cauafelype.maratona.java.devrentals.dominio.Console;
-import cauafelype.maratona.java.devrentals.dominio.ContratoAluguel;
-import cauafelype.maratona.java.devrentals.dominio.Equipamentos;
-import cauafelype.maratona.java.devrentals.dominio.placaDeVideo;
+import cauafelype.maratona.java.devrentals.dominio.*;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
@@ -23,11 +20,20 @@ public class DevRentalsTeste01 {
 
         Equipamentos equipamentoParaAlugar = lista.get(0);
 
-        ContratoAluguel alugarPlacaDeVideo = new ContratoAluguel(equipamentoParaAlugar, hoje, devolucao7Dias);
+        try {
+            ContratoAluguel alugarPlacaDeVideo = new ContratoAluguel(equipamentoParaAlugar, hoje, devolucao7Dias);
+            if (equipamentoParaAlugar.isDisponivel()) {
+                System.out.println("Equipamento: " + alugarPlacaDeVideo.getEquipamentos().getNome());
+                System.out.println("Esta é a data de retirada: " + alugarPlacaDeVideo.getDataRetirada());
+                System.out.println("Esta é a data para devolução: " + alugarPlacaDeVideo.getDataDevolucao());
+                System.out.println("Este é o preço a pagar pelo aluguel de 7 dias: " + alugarPlacaDeVideo.calcularValorTotal());
+                equipamentoParaAlugar.setDisponivel(false);
+            } else {
+                throw new EquipamentoIndisponivelException("Este equipamento não está disponível! ");
+            }
+        } catch (EquipamentoIndisponivelException e) {
+            System.out.println(e.getMessage());
+        }
 
-        System.out.println("Equipamento: " + alugarPlacaDeVideo.getEquipamentos().getNome());
-        System.out.println("Esta é a data de retirada: "+alugarPlacaDeVideo.getDataRetirada());
-        System.out.println("Esta é a data para devolução: "+alugarPlacaDeVideo.getDataDevolucao());
-        System.out.println("Este é o preço a pagar pelo aluguel de 7 dias: "+alugarPlacaDeVideo.calcularValorTotal());
     }
 }
