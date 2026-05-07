@@ -21,4 +21,28 @@ public class ContratoAluguel {
         }
         return diasAlugados * equipamentos.getValorDiaria();
     }
+
+    public Equipamentos getEquipamentos() {
+        return equipamentos;
+    }
+
+    public void setEquipamentos(Equipamentos equipamentos) {
+        this.equipamentos = equipamentos;
+    }
+
+    public LocalDate getDataRetirada() {
+        return dataRetirada;
+    }
+
+    public void setDataRetirada(LocalDate dataRetirada) {
+        this.dataRetirada = dataRetirada;
+    }
+
+    public LocalDate getDataDevolucao() {
+        return dataDevolucao;
+    }
+
+    public void setDataDevolucao(LocalDate dataDevolucao) {
+        this.dataDevolucao = dataDevolucao;
+    }
 }

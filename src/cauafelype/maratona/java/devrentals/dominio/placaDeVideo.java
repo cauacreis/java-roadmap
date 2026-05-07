@@ -6,4 +6,12 @@ public class placaDeVideo extends Equipamentos {
     public placaDeVideo(String nome, double valorDiaria, boolean disponivel) {
         super(nome, valorDiaria, disponivel);
     }
+
+    public int getMemoriaVram() {
+        return memoriaVram;
+    }
+
+    public void setMemoriaVram(int memoriaVram) {
+        this.memoriaVram = memoriaVram;
+    }
 }

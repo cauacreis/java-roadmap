@@ -7,4 +7,12 @@ public class Console extends Equipamentos {
         super(nome, valorDiaria, disponivel);
         this.geracao = geracao;
     }
+
+    public String getGeracao() {
+        return geracao;
+    }
+
+    public void setGeracao(String geracao) {
+        this.geracao = geracao;
+    }
 }
