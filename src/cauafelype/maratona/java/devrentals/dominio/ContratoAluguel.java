@@ -14,10 +14,11 @@ public class ContratoAluguel {
         this.dataDevolucao = dataDevolucao;
     }
 
-    public void calcularValorTotal() {
+    public double calcularValorTotal() {
         long diasAlugados = ChronoUnit.DAYS.between(dataRetirada, dataDevolucao);
-        if (diasAlugados <= 0) {
-            return diasAlugados * equipamentos.get
+        if (diasAlugados <= 0){
+        diasAlugados = 1;
         }
+        return diasAlugados * equipamentos.getValorDiaria();
     }
 }
