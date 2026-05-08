@@ -39,11 +39,10 @@ public class DevRentalsTeste01 {
         try {
             if (!equipamentoParaAlugar.isDisponivel()) {
                 throw new EquipamentoIndisponivelException("Este equipamento não está disponível! ");
-            } else {
+            }
                 ContratoAluguel alugarPlacaDeVideo2 = new ContratoAluguel(outraCaraTentantoAlugarAMesmaPlaca, hoje, devolucao7Dias);
                 equipamentoParaAlugar.setDisponivel(false);
                 System.out.println("Aluguel realizado com sucesso! Valor: R$ " + alugarPlacaDeVideo2.calcularValorTotal());
-            }
         } catch (EquipamentoIndisponivelException e) {
                 System.out.println(e.getMessage());
             }
