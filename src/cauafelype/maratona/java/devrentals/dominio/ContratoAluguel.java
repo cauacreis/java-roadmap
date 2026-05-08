@@ -41,6 +41,7 @@ public class ContratoAluguel {
         } else {
             long diasAlugados = ChronoUnit.DAYS.between(dataRetirada, dataDevolucao);
             System.out.println("Equipamento devolvido dentro da data de devolução\n preço sem multas: "+getEquipamentos().getValorDiaria() * diasAlugados);
+            getEquipamentos().setDisponivel(true);
         }
 
     }
