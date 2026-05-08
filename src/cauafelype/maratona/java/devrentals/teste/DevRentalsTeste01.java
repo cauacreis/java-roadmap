@@ -21,10 +21,10 @@ public class DevRentalsTeste01 {
         Equipamentos equipamentoParaAlugar = lista.get(0);
 
         try {
-            ContratoAluguel alugarPlacaDeVideo = new ContratoAluguel(equipamentoParaAlugar, hoje, devolucao7Dias);
             if (!equipamentoParaAlugar.isDisponivel()) {
                 throw new EquipamentoIndisponivelException("Este equipamento não está disponível! ");
             }
+            ContratoAluguel alugarPlacaDeVideo = new ContratoAluguel(equipamentoParaAlugar, hoje, devolucao7Dias);
             System.out.println("Equipamento: " + alugarPlacaDeVideo.getEquipamentos().getNome());
             System.out.println("Esta é a data de retirada: " + alugarPlacaDeVideo.getDataRetirada());
             System.out.println("Esta é a data para devolução: " + alugarPlacaDeVideo.getDataDevolucao());
