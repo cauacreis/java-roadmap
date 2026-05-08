@@ -1,6 +1,7 @@
 package cauafelype.maratona.java.devrentals.dominio;
 
 import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.time.temporal.ChronoUnit;
 
 public class ContratoAluguel {
@@ -20,6 +21,10 @@ public class ContratoAluguel {
         diasAlugados = 1;
         }
         return diasAlugados * equipamentos.getValorDiaria();
+    }
+    public String formatarData(LocalDate data) {
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+        return data.format(formatter);
     }
 
     public Equipamentos getEquipamentos() {
