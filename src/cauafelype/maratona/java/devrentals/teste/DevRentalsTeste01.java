@@ -46,7 +46,6 @@ public class DevRentalsTeste01 {
                 System.out.println("Equipamento: " + alugarPlacaDeVideo2.getEquipamentos().getNome());
                 System.out.println("Esta é a data de retirada: " + alugarPlacaDeVideo2.getDataRetirada());
                 System.out.println("Esta é a data para devolução: " + alugarPlacaDeVideo2.getDataDevolucao());
-                equipamentoParaAlugar.setDisponivel(false);
         } catch (EquipamentoIndisponivelException e) {
                 System.out.println(e.getMessage());
             }
