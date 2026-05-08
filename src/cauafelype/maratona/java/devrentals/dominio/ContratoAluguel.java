@@ -30,7 +30,7 @@ public class ContratoAluguel {
     public void processarDevolucao(LocalDate dataRealDevolucao) {
         System.out.println("Esta é a data de devolução do seu equipamento: "+formatarData(dataDevolucao));
 
-        if (dataRealDevolucao.isBefore(dataDevolucao)) {
+        if (dataRealDevolucao.isAfter(dataDevolucao)) {
             long diasAtraso =  ChronoUnit.DAYS.between(dataDevolucao, dataRealDevolucao);
 
             double valorMultaPorDia = getEquipamentos().getValorDiaria() * 1.50;
@@ -41,8 +41,8 @@ public class ContratoAluguel {
         } else {
             long diasAlugados = ChronoUnit.DAYS.between(dataRetirada, dataDevolucao);
             System.out.println("Equipamento devolvido dentro da data de devolução\n preço sem multas: "+getEquipamentos().getValorDiaria() * diasAlugados);
-            getEquipamentos().setDisponivel(true);
         }
+        getEquipamentos().setDisponivel(true);
 
     }
 
