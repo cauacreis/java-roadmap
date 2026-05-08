@@ -35,5 +35,20 @@ public class DevRentalsTeste01 {
             System.out.println(e.getMessage());
         }
         System.out.println("\nDevRentals: Sistema operando normalmente.");
+        Equipamentos outraCaraTentantoAlugarAMesmaPlaca = lista.get(0);
+        try {
+           ContratoAluguel alugarPlacaDeVideo2 = new ContratoAluguel(outraCaraTentantoAlugarAMesmaPlaca, hoje, devolucao7Dias);
+            if (equipamentoParaAlugar.isDisponivel()) {
+                System.out.println("Equipamento: " + alugarPlacaDeVideo2.getEquipamentos().getNome());
+                System.out.println("Esta é a data de retirada: " + alugarPlacaDeVideo2.getDataRetirada());
+                System.out.println("Esta é a data para devolução: " + alugarPlacaDeVideo2.getDataDevolucao());
+                System.out.println("Este é o preço a pagar pelo aluguel de 7 dias: " + alugarPlacaDeVideo2.calcularValorTotal());
+                equipamentoParaAlugar.setDisponivel(false);
+            } else {
+                throw new EquipamentoIndisponivelException("Este equipamento não está disponível! ");
+            }
+            } catch (EquipamentoIndisponivelException e) {
+                System.out.println(e.getMessage());
+            }
     }
 }
