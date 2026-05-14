@@ -11,4 +11,6 @@ public class QuartoStandard extends Quarto{
     public boolean isVistaParaOmar() {
         return vistaParaOmar;
     }
+
+
 }

@@ -19,4 +19,12 @@ public abstract class Quarto {
     public double getValorDiaria() {
         return valorDiaria;
     }
+
+    public StatusQuarto getStatusQuarto() {
+        return statusQuarto;
+    }
+
+    public void setStatusQuarto(StatusQuarto statusQuarto) {
+        this.statusQuarto = statusQuarto;
+    }
 }
