@@ -7,4 +7,8 @@ public class QuartoStandard extends Quarto{
         super(numeroQuarto, valorDiaria);
         this.vistaParaOmar = vistaParaOmar;
     }
+
+    public boolean isVistaParaOmar() {
+        return vistaParaOmar;
+    }
 }

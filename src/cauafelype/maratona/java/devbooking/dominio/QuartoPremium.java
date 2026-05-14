@@ -7,4 +7,8 @@ public class QuartoPremium extends Quarto{
         super(numeroQuarto, valorDiaria);
         this.temHidromassagem = temHidromassagem;
     }
+
+    public boolean isTemHidromassagem() {
+        return temHidromassagem;
+    }
 }
