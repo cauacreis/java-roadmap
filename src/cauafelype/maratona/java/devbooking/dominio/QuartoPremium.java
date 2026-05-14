@@ -3,8 +3,8 @@ package cauafelype.maratona.java.devbooking.dominio;
 public class QuartoPremium extends Quarto{
     private boolean temHidromassagem;
 
-    public QuartoPremium(int numeroQuarto, double valorDiaria, boolean temHidromassagem) {
-        super(numeroQuarto, valorDiaria);
+    public QuartoPremium(int numeroQuarto, double valorDiaria, StatusQuarto statusQuarto, boolean temHidromassagem) {
+        super(numeroQuarto, valorDiaria, statusQuarto);
         this.temHidromassagem = temHidromassagem;
     }
 
