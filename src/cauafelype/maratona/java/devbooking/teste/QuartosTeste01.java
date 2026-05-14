@@ -5,6 +5,8 @@ import cauafelype.maratona.java.devbooking.dominio.QuartoPremium;
 import cauafelype.maratona.java.devbooking.dominio.QuartoStandard;
 import cauafelype.maratona.java.devbooking.dominio.StatusQuarto;
 
+import java.util.Scanner;
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -17,6 +19,11 @@ public class QuartosTeste01 {
         quartos.add(normal);
         quartos.add(premium);
 
+        LocalDate hoje =  LocalDate.now();
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Sua reserva vai durar quantos dias?");
+        sc.nextLine();
+        LocalDate dataReserva = hoje.plusDays(sc.nextInt());
 
 
     }
