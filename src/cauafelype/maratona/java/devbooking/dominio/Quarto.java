@@ -1,12 +1,15 @@
 package cauafelype.maratona.java.devbooking.dominio;
 
 public abstract class Quarto {
-    int numeroQuarto;
-    double valorDiaria;
+    private int numeroQuarto;
+    private double valorDiaria;
+    private StatusQuarto statusQuarto;
 
-    public Quarto(int numeroQuarto, double valorDiaria) {
+
+    public Quarto(int numeroQuarto, double valorDiaria, StatusQuarto statusQuarto) {
         this.numeroQuarto = numeroQuarto;
         this.valorDiaria = valorDiaria;
+        this.statusQuarto = statusQuarto;
     }
 
     public int getNumeroQuarto() {
