@@ -1,6 +1,7 @@
 package cauafelype.maratona.java.devbooking.dominio;
 
 import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.time.temporal.ChronoUnit;
 
 public class Reserva {
@@ -13,5 +14,10 @@ public class Reserva {
         long diasReservas = ChronoUnit.DAYS.between(dataCheckIn, dataCheckOut);
         double total = quarto.getValorDiaria() * diasReservas;
         return total;
+    }
+
+    public String formatarData(LocalDate data) {
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+        return data.format(formatter);
     }
 }
