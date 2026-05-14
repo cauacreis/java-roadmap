@@ -20,4 +20,11 @@ public class Reserva {
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
         return data.format(formatter);
     }
+
+    public Reserva(Quarto quarto, String nomeHospede, LocalDate dataCheckIn, LocalDate dataCheckOut) {
+        this.quarto = quarto;
+        this.nomeHospede = nomeHospede;
+        this.dataCheckIn = dataCheckIn;
+        this.dataCheckOut = dataCheckOut;
+    }
 }

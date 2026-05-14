@@ -1,10 +1,8 @@
 package cauafelype.maratona.java.devbooking.teste;
 
-import cauafelype.maratona.java.devbooking.dominio.Quarto;
-import cauafelype.maratona.java.devbooking.dominio.QuartoPremium;
-import cauafelype.maratona.java.devbooking.dominio.QuartoStandard;
-import cauafelype.maratona.java.devbooking.dominio.StatusQuarto;
+import cauafelype.maratona.java.devbooking.dominio.*;
 
+import java.sql.SQLOutput;
 import java.util.Scanner;
 import java.time.LocalDate;
 import java.util.ArrayList;
@@ -25,6 +23,13 @@ public class QuartosTeste01 {
         sc.nextLine();
         LocalDate dataReserva = hoje.plusDays(sc.nextInt());
 
+        Quarto quartosParaReservar = quartos.get(0);
 
+        try {
+            if(quartosParaReservar.getStatusQuarto().equals(StatusQuarto.OCUPADO) || quartosParaReservar.getStatusQuarto().equals(StatusQuarto.MANUTENCAO)) {
+                throw new QuartoIndisponivelException("Este quarto está ocupado ou em manutenção, espere ele estar livre!");
+            }
+            Reserva quartoPadrao = new  Reserva();
+        }
     }
 }
