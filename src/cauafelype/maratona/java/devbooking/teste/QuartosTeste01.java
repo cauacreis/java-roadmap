@@ -30,9 +30,8 @@ public class QuartosTeste01 {
             System.out.println("Esta é a data do seu CheckIn:"+quartoParaPedro.getDataCheckIn());
             System.out.println("Esta é a data do seu CheckOut:"+quartoParaPedro.getDataCheckOut());
             quartoParaPedro.calcularTotal();
-            System.out.println(quartoParaPedro.getStatusQuarto());
             quartosParaReservar.setStatusQuarto(StatusQuarto.OCUPADO);
-            System.out.println(quartoParaPedro.getStatusQuarto());
+            System.out.println(quartosParaReservar.getStatusQuarto());
         } catch (QuartoIndisponivelException e) {
             System.out.println(e.getMessage());
         }
