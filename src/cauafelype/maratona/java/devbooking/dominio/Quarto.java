@@ -3,7 +3,7 @@ package cauafelype.maratona.java.devbooking.dominio;
 public abstract class Quarto {
     private int numeroQuarto;
     private double valorDiaria;
-    private StatusQuarto statusQuarto;
+    private StatusQuarto statusQuarto = StatusQuarto.LIVRE;
 
 
     public Quarto(int numeroQuarto, double valorDiaria, StatusQuarto statusQuarto) {

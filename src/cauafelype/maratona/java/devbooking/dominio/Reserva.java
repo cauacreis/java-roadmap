@@ -9,6 +9,7 @@ public class Reserva {
     private String nomeHospede;
     private LocalDate dataCheckIn;
     private LocalDate dataCheckOut;
+    private StatusQuarto statusQuarto;
 
     public double calcularTotal (){
         long diasReservas = ChronoUnit.DAYS.between(dataCheckIn, dataCheckOut);
@@ -44,5 +45,13 @@ public class Reserva {
 
     public LocalDate getDataCheckOut() {
         return dataCheckOut;
+    }
+
+    public StatusQuarto getStatusQuarto() {
+        return statusQuarto;
+    }
+
+    public void setStatusQuarto(StatusQuarto statusQuarto) {
+        this.statusQuarto = statusQuarto;
     }
 }
