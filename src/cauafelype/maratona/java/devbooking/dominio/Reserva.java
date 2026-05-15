@@ -24,6 +24,11 @@ public class Reserva {
     }
 
     public Reserva(Quarto quarto, String nomeHospede, LocalDate dataCheckIn, LocalDate dataCheckOut) {
+
+        if (dataCheckOut.isBefore(dataCheckIn) || dataCheckIn.isEqual(dataCheckIn)){
+            throw new DatasInvalidasException("Esta não é uma data válica");
+        }
+
         this.quarto = quarto;
         this.nomeHospede = nomeHospede;
         this.dataCheckIn = dataCheckIn;

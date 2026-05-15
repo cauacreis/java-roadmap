@@ -57,9 +57,6 @@ public class QuartosTeste01 {
             if (quartosParaReservar3.getStatusQuarto() != StatusQuarto.LIVRE) {
                 throw new QuartoIndisponivelException("Este quarto está indisponível!");
             }
-            if (dataReservaPraTras.isBefore(dataReserva)) {
-                throw new DatasInvalidasException("Esta não é uma data válida");
-            }
             Reserva quartoParaJose = new Reserva(quartosParaReservar3, "Jose", hoje, dataReservaPraTras);
             System.out.println("Esta é a data do seu CheckIn:"+quartoParaJose.getDataCheckIn());
             System.out.println("Esta é a data do seu CheckOut:"+quartoParaJose.getDataCheckOut());
