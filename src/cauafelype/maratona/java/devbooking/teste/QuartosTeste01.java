@@ -18,10 +18,7 @@ public class QuartosTeste01 {
         quartos.add(premium);
 
         LocalDate hoje =  LocalDate.now();
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Sua reserva vai durar quantos dias?");
-        sc.nextLine();
-        LocalDate dataReserva = hoje.plusDays(sc.nextInt());
+        LocalDate dataReserva = hoje.plusDays(7);
 
         Quarto quartosParaReservar = quartos.get(0);
 
@@ -29,7 +26,11 @@ public class QuartosTeste01 {
             if(quartosParaReservar.getStatusQuarto().equals(StatusQuarto.OCUPADO) || quartosParaReservar.getStatusQuarto().equals(StatusQuarto.MANUTENCAO)) {
                 throw new QuartoIndisponivelException("Este quarto está ocupado ou em manutenção, espere ele estar livre!");
             }
-            Reserva quartoPadrao = new  Reserva();
+            Reserva quartoPadrao = new  Reserva(quartosParaReservar, "Pedro", hoje, dataReserva);
+            quartoPadrao.calcularTotal();
+            quartoPadrao.calcularTotal();
+        } catch (QuartoIndisponivelException e) {
+            System.out.println(e.getMessage());
         }
     }
 }
