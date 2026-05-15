@@ -2,6 +2,7 @@ package cauafelype.maratona.java.devbooking.teste;
 
 import cauafelype.maratona.java.devbooking.dominio.*;
 
+import javax.xml.crypto.Data;
 import java.sql.SQLOutput;
 import java.util.Scanner;
 import java.time.LocalDate;
@@ -47,7 +48,7 @@ public class QuartosTeste01 {
             quartoParaJoao.calcularTotal();
             quartosParaReservar2.setStatusQuarto(StatusQuarto.OCUPADO);
             System.out.println(quartosParaReservar2.getStatusQuarto());
-        } catch (QuartoIndisponivelException e) {
+        } catch (QuartoIndisponivelException | DatasInvalidasException e) {
             System.out.println(e.getMessage());
         }
         Quarto quartosParaReservar3 = quartos.get(1);
@@ -63,9 +64,7 @@ public class QuartosTeste01 {
             quartoParaJose.calcularTotal();
             quartosParaReservar3.setStatusQuarto(StatusQuarto.OCUPADO);
             System.out.println(quartosParaReservar3.getStatusQuarto());
-        } catch (QuartoIndisponivelException e) {
-            System.out.println(e.getMessage());
-        } catch (DatasInvalidasException e) {
+        } catch (QuartoIndisponivelException | DatasInvalidasException e) {
             System.out.println(e.getMessage());
         }
     }
