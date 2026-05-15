@@ -19,6 +19,7 @@ public class Reserva {
 
     public String formatarData(LocalDate data) {
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+        System.out.println("Formatando dd/MM/yyyy: "+data);
         return data.format(formatter);
     }
 
