@@ -13,7 +13,7 @@ public class Reserva {
     public double calcularTotal (){
         long diasReservas = ChronoUnit.DAYS.between(dataCheckIn, dataCheckOut);
         double total = quarto.getValorDiaria() * diasReservas;
-        System.out.println("Este é o total a ser pago: "+total);
+        System.out.println("Este é o total a ser pago: %.2f"+total);
         return total;
     }
 

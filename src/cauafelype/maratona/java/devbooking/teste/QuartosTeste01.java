@@ -28,6 +28,7 @@ public class QuartosTeste01 {
             }
             Reserva quartoPadrao = new  Reserva(quartosParaReservar, "Pedro", hoje, dataReserva);
             quartoPadrao.calcularTotal();
+            quartoPadrao.formatarData(dataReserva);
         } catch (QuartoIndisponivelException e) {
             System.out.println(e.getMessage());
         }
