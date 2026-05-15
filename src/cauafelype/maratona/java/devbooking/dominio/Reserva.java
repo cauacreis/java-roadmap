@@ -29,4 +29,20 @@ public class Reserva {
         this.dataCheckIn = dataCheckIn;
         this.dataCheckOut = dataCheckOut;
     }
+
+    public Quarto getQuarto() {
+        return quarto;
+    }
+
+    public String getNomeHospede() {
+        return nomeHospede;
+    }
+
+    public LocalDate getDataCheckIn() {
+        return dataCheckIn;
+    }
+
+    public LocalDate getDataCheckOut() {
+        return dataCheckOut;
+    }
 }

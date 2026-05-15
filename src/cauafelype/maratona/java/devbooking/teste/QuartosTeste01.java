@@ -26,10 +26,10 @@ public class QuartosTeste01 {
             if(quartosParaReservar.getStatusQuarto().equals(StatusQuarto.OCUPADO) || quartosParaReservar.getStatusQuarto().equals(StatusQuarto.MANUTENCAO)) {
                 throw new QuartoIndisponivelException("Este quarto está ocupado ou em manutenção, espere ele estar livre!");
             }
-            Reserva quartoPadrao = new  Reserva(quartosParaReservar, "Pedro", hoje, dataReserva);
-            quartoPadrao.calcularTotal();
-            System.out.println("Esta é a data do seu CheckIn:"+hoje);
-            System.out.println("Esta é a data do seu CheckOut:"+dataReserva);
+            Reserva quartoParaPedro = new Reserva(quartosParaReservar, "Pedro", hoje, dataReserva);
+            quartoParaPedro.calcularTotal();
+            System.out.println("Esta é a data do seu CheckIn:"+quartoParaPedro.getDataCheckIn());
+            System.out.println("Esta é a data do seu CheckOut:"+quartoParaPedro.getDataCheckOut());
         } catch (QuartoIndisponivelException e) {
             System.out.println(e.getMessage());
         }
