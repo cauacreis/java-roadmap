@@ -51,18 +51,25 @@ public class QuartosTeste01 {
             System.out.println(e.getMessage());
         }
         Quarto quartosParaReservar3 = quartos.get(1);
+        LocalDate dataReservaPraTras = hoje.minusDays(7);
 
         try {
             if (quartosParaReservar3.getStatusQuarto() != StatusQuarto.LIVRE) {
                 throw new QuartoIndisponivelException("Este quarto está indisponível!");
             }
-            LocalDate dataReservaPraTras = hoje.minusDays(7);
+            if (dataReservaPraTras.isBefore(dataReserva)) {
+                throw new DatasInvalidasException("Esta não é uma data válida");
+            }
             Reserva quartoParaJose = new Reserva(quartosParaReservar3, "Jose", hoje, dataReservaPraTras);
             System.out.println("Esta é a data do seu CheckIn:"+quartoParaJose.getDataCheckIn());
             System.out.println("Esta é a data do seu CheckOut:"+quartoParaJose.getDataCheckOut());
             quartoParaJose.calcularTotal();
             quartosParaReservar3.setStatusQuarto(StatusQuarto.OCUPADO);
             System.out.println(quartosParaReservar3.getStatusQuarto());
+        } catch (QuartoIndisponivelException e) {
+            System.out.println(e.getMessage());
+        } catch (DatasInvalidasException e) {
+            System.out.println(e.getMessage());
         }
     }
 }
