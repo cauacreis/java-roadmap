@@ -23,7 +23,7 @@ public class QuartosTeste01 {
         Quarto quartosParaReservar = quartos.get(0);
 
         try {
-            if(quartosParaReservar.getStatusQuarto().equals(StatusQuarto.OCUPADO) || quartosParaReservar.getStatusQuarto().equals(StatusQuarto.MANUTENCAO)) {
+            if(quartosParaReservar.getStatusQuarto() != StatusQuarto.LIVRE) {
                 throw new QuartoIndisponivelException("Este quarto está ocupado ou em manutenção, espere ele estar livre!");
             }
             Reserva quartoParaPedro = new Reserva(quartosParaReservar, "Pedro", hoje, dataReserva);
