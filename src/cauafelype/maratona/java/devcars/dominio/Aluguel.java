@@ -27,6 +27,15 @@ public class Aluguel implements Tributavel {
         return veiculo.getTipoCombustivel().calcularDescontoAmbiental(valorBase);
     }
 
+    @Override
+    public String toString() {
+        return "Aluguel{" +
+                "\nveiculo=" + getVeiculo().getMarca() +
+                "\ndataRetirada = " + getDataRetirada() +
+                "\ndataDevolucao = " + getDataDevolucao() +
+                '}';
+    }
+
     public Veiculo getVeiculo() {
         return veiculo;
     }
