@@ -1,5 +1,7 @@
 package cauafelype.maratona.java.devcars.dominio;
 
+import java.time.LocalDate;
+
 public abstract class Veiculo {
     private String marca;
     private double valorDiaria;
@@ -10,6 +12,7 @@ public abstract class Veiculo {
         this.valorDiaria = valorDiaria;
         this.tipoCombustivel = tipoCombustivel;
     }
+
 
     public double getValorDiaria() {
         return valorDiaria;

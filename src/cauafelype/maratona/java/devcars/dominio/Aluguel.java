@@ -10,15 +10,15 @@ public class Aluguel implements Tributavel {
     private LocalDate dataRetirada;
     private LocalDate dataDevolucao;
 
-    public Aluguel(Veiculo veiculo, LocalDate dataRetirada, LocalDate dataDevolucao) {
+    public Aluguel(Veiculo veiculo, int diasAluguel) {
 
-        if (dataRetirada.isEqual(dataDevolucao) || dataDevolucao.isBefore(dataRetirada)) {
-            throw new DatasInvalidasException("Erro: a devolução deve ocorrer pelo menos 1 dia depois da retirada!");
+        if (diasAluguel <= 0) {
+            throw new DatasInvalidasException("Erro: o aluguel deve durar pelo menos 1 dia");
         }
 
         this.veiculo = veiculo;
-        this.dataRetirada = dataRetirada;
-        this.dataDevolucao = dataDevolucao;
+        this.dataRetirada = LocalDate.now();
+        this.dataDevolucao = this.dataRetirada.plusDays(diasAluguel);
     }
 
     public double calcularTotal() {
