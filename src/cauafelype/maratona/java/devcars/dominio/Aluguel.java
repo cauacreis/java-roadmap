@@ -1,7 +1,7 @@
 package cauafelype.maratona.java.devcars.dominio;
 
 import cauafelype.maratona.java.devbooking.dominio.DatasInvalidasException;
-
+import java.time.format.DateTimeFormatter;
 import java.time.LocalDate;
 import java.time.temporal.ChronoUnit;
 
@@ -29,10 +29,14 @@ public class Aluguel implements Tributavel {
 
     @Override
     public String toString() {
+        // Criamos o padrão BR
+        DateTimeFormatter formatador = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+
         return "Aluguel{" +
-                "\nveiculo=" + getVeiculo().getMarca() +
-                "\ndataRetirada = " + getDataRetirada() +
-                "\ndataDevolucao = " + getDataDevolucao() +
+                "veiculo=" + veiculo.getMarca() +
+                // Aplicamos o formato nas datas!
+                ", dataRetirada=" + dataRetirada.format(formatador) +
+                ", dataDevolucao=" + dataDevolucao.format(formatador) +
                 '}';
     }
 
