@@ -5,7 +5,7 @@ import cauafelype.maratona.java.devbooking.dominio.DatasInvalidasException;
 import java.time.LocalDate;
 import java.time.temporal.ChronoUnit;
 
-public class Aluguel {
+public class Aluguel implements Tributavel {
     private  Veiculo veiculo;
     private LocalDate dataRetirada;
     private LocalDate dataDevolucao;
@@ -37,5 +37,10 @@ public class Aluguel {
 
     public LocalDate getDataDevolucao() {
         return dataDevolucao;
+    }
+
+    @Override
+    public double calcularImposto() {
+        return calcularTotal() * 0.05;
     }
 }
