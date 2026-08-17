@@ -13,7 +13,7 @@ public class DevCarsTeste {
         Aluguel PedroContrato = new Aluguel(tesla, 10);
 
         System.out.println("Pedro Contrato: " + PedroContrato.toString());
-        System.out.println("Total a pagar: R$ "+PedroContrato.calcularTotal());
-        System.out.println("Total de imposto a ser pago: R$ "+PedroContrato.calcularImposto());
+        System.out.printf("Total a pagar: R$ %.2f\n",PedroContrato.calcularTotal());
+        System.out.printf("Total de imposto a ser pago: R$ %.2f\n",PedroContrato.calcularImposto());
     }
 }
