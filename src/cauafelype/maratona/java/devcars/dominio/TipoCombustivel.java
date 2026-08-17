@@ -1,4 +1,4 @@
-package cauafelype.maratona.java.devcars;
+package cauafelype.maratona.java.devcars.dominio;
 
 public enum TipoCombustivel {
     FLEX {
