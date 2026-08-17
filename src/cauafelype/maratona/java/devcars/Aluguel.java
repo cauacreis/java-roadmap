@@ -20,4 +20,22 @@ public class Aluguel {
         this.dataRetirada = dataRetirada;
         this.dataDevolucao = dataDevolucao;
     }
+
+    public double calcularTotal() {
+        long dias = ChronoUnit.DAYS.between(dataRetirada, dataDevolucao);
+        double valorBase = dias * veiculo.getValorDiaria();
+        return veiculo.getTipoCombustivel().calcularDescontoAmbiental(valorBase);
+    }
+
+    public Veiculo getVeiculo() {
+        return veiculo;
+    }
+
+    public LocalDate getDataRetirada() {
+        return dataRetirada;
+    }
+
+    public LocalDate getDataDevolucao() {
+        return dataDevolucao;
+    }
 }
