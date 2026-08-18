@@ -1,6 +1,6 @@
 package cauafelype.maratona.java.javacore.interfaces.dominio;
 
-public class CarroTributo implements Tributavel {
+public class CarroTributo implements Tributavel, SistemaSeguravel {
     private double valor;
     private String modelo;
 
@@ -25,5 +25,10 @@ public class CarroTributo implements Tributavel {
 
     public String getModelo() {
         return modelo;
+    }
+
+    @Override
+    public double calcularSeguro() {
+        return valor * 0.02;
     }
 }
