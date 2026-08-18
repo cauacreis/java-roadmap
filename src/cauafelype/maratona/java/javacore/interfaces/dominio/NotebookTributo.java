@@ -21,4 +21,9 @@ public class NotebookTributo implements Tributavel {
     public double calcularImposto() {
         return this.valor * 0.15;
     }
+
+    @Override
+    public String getDescricaoDoItem() {
+        return this.modelo;
+    }
 }

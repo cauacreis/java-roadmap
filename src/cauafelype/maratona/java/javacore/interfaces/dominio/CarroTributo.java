@@ -14,6 +14,11 @@ public class CarroTributo implements Tributavel {
         return this.valor * 0.05;
     }
 
+    @Override
+    public String getDescricaoDoItem() {
+        return this.modelo;
+    }
+
     public double getValor() {
         return valor;
     }
