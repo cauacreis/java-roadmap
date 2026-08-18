@@ -33,7 +33,7 @@ public class CarroTributo implements Tributavel, SistemaSeguravel {
     }
 
     @Override
-    public String emitirRecibo() {
-        return "Emitindo recibo carro: "+getModelo()+"\nDo valor: R$"+getValor();
+    public void emitirRecibo() {
+        System.out.println("Emitindo recibo exclusivo do carro: " + getModelo() + "\nDo valor: R$" + getValor());
     }
 }
