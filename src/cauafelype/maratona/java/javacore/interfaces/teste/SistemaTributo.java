@@ -19,6 +19,8 @@ public class SistemaTributo {
         System.out.println("Sistema de cobrança ativado");
         double totalArrecadado = 0;
 
+        System.out.println("Seguro do Tesla: R$" + Tesla.calcularSeguro());
+
         for (Tributavel t : listaParaTaxar) {
             double impostoCobrado = t.calcularImposto();
             System.out.println("Imposto: " + impostoCobrado + "\nDo item: "+t.getDescricaoDoItem());
