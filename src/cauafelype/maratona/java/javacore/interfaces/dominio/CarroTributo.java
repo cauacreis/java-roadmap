@@ -31,4 +31,9 @@ public class CarroTributo implements Tributavel, SistemaSeguravel {
     public double calcularSeguro() {
         return valor * 0.02;
     }
+
+    @Override
+    public String emitirRecibo() {
+        return "Emitindo recibo carro: "+getModelo()+"\nDo valor: R$"+getValor();
+    }
 }

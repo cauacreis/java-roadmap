@@ -25,6 +25,7 @@ public class SistemaTributo {
             double impostoCobrado = t.calcularImposto();
             System.out.println("Imposto: " + impostoCobrado + "\nDo item: "+t.getDescricaoDoItem());
             totalArrecadado += impostoCobrado;
+            t.emitirRecibo();
             System.out.println("Próximo item\n");
         }
         System.out.println("Lista finalizada de cobrança!");
