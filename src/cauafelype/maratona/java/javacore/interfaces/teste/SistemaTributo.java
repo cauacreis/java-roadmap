@@ -30,5 +30,7 @@ public class SistemaTributo {
         }
         System.out.println("Lista finalizada de cobrança!");
         System.out.println("Total: " + totalArrecadado);
+
+        Tributavel.imprimirRegrasDaReceita();
     }
 }
